@@ -1,0 +1,23 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+header {
+  background-image: url("/assets/images/banner.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.4);
+}
+
+header h1, header p {
+  position: relative;
+  z-index: 2;
+}
