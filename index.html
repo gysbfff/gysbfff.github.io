@@ -1,76 +1,106 @@
 <!DOCTYPE html>
-<html lang="zh‑CN">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF‑8">
-    <meta name="viewport" content="width=device‑width, initial‑scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gysbfff 的技术博客</title>
     <style>
-        * {margin:0;padding:0;box-sizing:border-box;}
-        body {font-family: system-ui,-apple-system,Segoe UI,Roboto,sans-serif;}
-
-        /* 导航栏样式 */
-        nav {
-            background:#222;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .nav-wrap {
-            max-width:720px;
-            margin:0 auto;
-            display:flex;
-            gap:2rem;
-            padding:1rem 20px;
-        }
-        .nav-wrap a {
-            color:#fff;
-            text-decoration:none;
-        }
-        .nav-wrap a:hover {
-            color:#99ccff;
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            color: #222;
+            background: #ffffff;
         }
 
-        /* 灰色大横幅 hero */
+        /* 顶部导航 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 24px;
+        }
+        .blog-logo {
+            font-size: 32px;
+            font-weight: bold;
+            color:#666;
+        }
+        .menu-btn {
+            font-size:30px;
+            color:#888;
+        }
+
+        /* 灰色Hero横幅 */
         .hero {
             background-color:#888888;
-            color:white;
+            color:#fff;
             text-align:center;
-            padding:80px 20px;
+            padding:70px 20px;
         }
-        .hero h1 {font-size:2.4rem;margin-bottom:12px;}
-        .hero p {font-size:1.2rem;opacity:0.92;}
+        .hero h1 {
+            font-size:72px;
+            line-height:1.2;
+        }
+        .divider {
+            width:120px;
+            height:4px;
+            background:#fff;
+            margin:16px auto;
+        }
+        .hero p {
+            font-size:26px;
+            opacity:0.92;
+        }
 
-        .container {max-width:720px;margin:40px auto;padding:0 20px;}
-        .post-item {
-            padding:16px 0;
-            border-bottom:1px solid #eee;
+        /* 文章列表区域 */
+        .content-wrap {
+            max-width:900px;
+            margin: 60px auto;
+            padding:0 24px;
         }
-        .post-item a {font-size:1.15rem;color:#222;text-decoration:none;}
-        .post-item a:hover {color:#0066cc;}
+        .post-item {
+            margin-bottom:48px;
+            border-bottom:1px solid #ddd;
+            padding-bottom:32px;
+        }
+        .post-item a {
+            font-size:44px;
+            color:#111;
+            text-decoration:none;
+            font-weight:bold;
+        }
+        .post-item a:hover {
+            color:#4477bb;
+        }
+        .post-date {
+            font-size:22px;
+            color:#777;
+            margin-top:12px;
+        }
     </style>
 </head>
 <body>
-<!--导航栏-->
-<nav>
-    <div class="nav-wrap">
-        <a href=" ">首页</a >
-        <a href="./posts/">文章</a >
-        <a href="#about">关于我</a >
-    </div>
-</nav>
+<header>
+    <div class="blog-logo">gysbfffTechBlog</div>
+    <div class="menu-btn">☰</div>
+</header>
 
 <section class="hero">
-    <h1>gysbfff 的技术博客</h1>
-    <p>关注：网络安全、学习记录、技术实践</p >
+    <h1>gysbfff的技术<br>博客</h1>
+    <div class="divider"></div>
+    <p>关注：网络安全、学习记录、技术实践</p>
 </section>
 
-<div class="container">
-    <h2>文章列表</h2>
+<div class="content-wrap">
     <div class="post-item">
-        <a href="./2026/09/08/first.html">第一篇示例文章</a >
-    </div>
-
-    <div id="about" style="margin-top:60px;padding-top:20px;border-top:1px solid #eee;">
-        <h2>关于我</h2>
-        <p style="margin-top:10px;color:#444;">记录网络安全学习过程，分享技术笔记与实践心得。</p >
+        <a href="./2026/09/08/first.html">第一篇示例文章</a>
+        <div class="post-date">2026‑09‑08</div>
     </div>
 </div>
+
 </body>
 </html>
+
