@@ -1,4 +1,4 @@
-remote_theme: jekyll/minima
+remote_theme: pages-themes/modernist@v0.2.0
 title: gysbfff 的博客
-description: 网络安全学习笔记
-show_excerpts: true
+description: 网络安全个人学习记录
+
