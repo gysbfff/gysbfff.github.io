@@ -3,107 +3,20 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gysbfff 的技术博客</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
-            color: #222;
-            background: #ffffff;
-        }
-
-        /* 顶部导航 */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 24px 24px;
-        }
-        .blog-logo {
-            font-size: 32px;
-            font-weight: bold;
-            color:#666;
-        }
-        .menu-btn {
-            font-size:30px;
-            color:#888;
-        }
-
-        /* 灰色Hero横幅 */
-        .hero {
-            background-color:#888888;
-            color:#fff;
-            text-align:center;
-            padding:70px 20px;
-        }
-        .hero h1 {
-            font-size:72px;
-            line-height:1.2;
-        }
-        .divider {
-            width:120px;
-            height:4px;
-            background:#fff;
-            margin:16px auto;
-        }
-        .hero p {
-            font-size:26px;
-            opacity:0.92;
-        }
-
-        /* 文章列表区域 */
-        .content-wrap {
-            max-width:900px;
-            margin: 60px auto;
-            padding:0 24px;
-        }
-        .post-item {
-            margin-bottom:48px;
-            border-bottom:1px solid #ddd;
-            padding-bottom:32px;
-        }
-        .post-item a {
-            font-size:44px;
-            color:#111;
-            text-decoration:none;
-            font-weight:bold;
-        }
-        .post-item a:hover {
-            color:#4477bb;
-        }
-        .post-date {
-            font-size:22px;
-            color:#777;
-            margin-top:12px;
-        }
-    </style>
-</head>
-<body>
-<header>
-    <div class="blog-logo">gysbfffTechBlog</div>
-    <div class="menu-btn">☰</div>
-</header>
-
-<section class="hero">
-    <h1>gysbfff的技术<br>博客</h1>
-    <div class="divider"></div>
-    <p>关注：网络安全、学习记录、技术实践</p>
-</section>
-
-{% for post in site.posts %}
-<div class="post-item">
-  <h2><a href=" ">{{ post.title }}</a ></h2>
-  <p>{{ post.date | date: "%Y-%m-%d" }}</p >
-</div>
-{% endfor %}
-</div>
-
-</body>
-</html>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>gysbfff 的技术博客</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #222;
+  background: #ffffff;
+}
+/* 顶部导航 */
+header {
+  display: flex;
