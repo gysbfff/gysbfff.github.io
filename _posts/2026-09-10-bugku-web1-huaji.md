@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Bugku CTF Web1 滑稽 Writeup
 date: 2026-09-10
 categories: ["CTF","Web安全"]
