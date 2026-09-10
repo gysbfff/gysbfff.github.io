@@ -1,8 +1,8 @@
 ---
 title: Bugku CTF Web1 滑稽 Writeup
 date: 2026-09-10
-categories: [CTF, Web安全]
-tags: [Bugku, Web, 源码泄露, 入门签到题]
+categories: [''CTF'',''Web安全'']
+tags: [''Bugku'',''Web'',''源码泄露'',''入门签到题'']
 ---
 
 # Bugku CTF Web1 滑稽 Writeup
