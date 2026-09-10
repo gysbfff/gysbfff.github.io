@@ -17,7 +17,8 @@ body {
   color: #222;
   background: #ffffff;
 }
-/* 顶部导航 叠加在banner上 */
+
+/* 顶部导航 */
 header {
   display: flex;
   justify-content: space-between;
@@ -26,109 +27,149 @@ header {
   background: rgba(0,0,0,0.35);
   color: #fff;
   position: absolute;
-  width:100%;
-  top:0;
+  width: 100%;
+  top: 0;
   z-index: 10;
 }
-header .logo{
-  font-size:24px;
-  font-weight:bold;
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
 }
-/* 汉堡按钮 */
-.hamburger{
-  font-size:32px;
-  cursor:pointer;
+
+.hamburger {
+  font-size: 32px;
+  cursor: pointer;
 }
-/* 下拉菜单 */
-.menu{
-  position:absolute;
-  top:70px;
-  right:32px;
-  background:rgba(0,0,0,0.75);
-  border-radius:8px;
-  padding:12px 0;
-  display:none;
+
+.menu {
+  position: absolute;
+  top: 70px;
+  right: 32px;
+  background: rgba(0,0,0,0.75);
+  border-radius: 8px;
+  padding: 12px 0;
+  display: none;
 }
-.menu a{
-  display:block;
-  color:white;
-  text-decoration:none;
-  padding:10px 24px;
+
+.menu a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 24px;
 }
-.menu a:hover{
-  background:rgba(255,255,255,0.2);
+
+.menu a:hover {
+  background: rgba(255,255,255,0.2);
 }
-.menu.show{
-  display:block;
+
+.menu.show {
+  display: block;
 }
-/* 横幅banner */
-.banner{
-  width:100%;
-  height:340px;
+
+/* 横幅保持不变，中间加文字 */
+.banner {
+  width: 100%;
+  height: 340px;
   background-image: url("banner.jpg");
   background-size: cover;
-  background-position:center;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
 }
-/* 文章区域 */
-.container{
-  max-width:960px;
-  margin:40px auto;
-  padding:0 24px;
+
+.banner-text {
+  background: rgba(0,0,0,0.45);
+  padding: 24px 32px;
+  border-radius: 12px;
 }
-.container h2{
-  margin-bottom:24px;
-  border-left:5px solid #2277dd;
-  padding-left:14px;
-  font-size:28px;
+
+.banner-text h1 {
+  font-size: 36px;
+  margin-bottom: 12px;
 }
-.post-item{
-  padding:18px 0;
-  border-bottom:1px solid #eee;
+
+.banner-text p {
+  font-size: 16px;
+  opacity: 0.9;
 }
-.post-item a{
-  font-size:24px;
-  color:#2277dd;
-  text-decoration:none;
+
+/* 文章列表 */
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 24px;
 }
-.post-item p{
-  margin-top:8px;
-  color:#666;
-  font-size:18px;
+
+.container h2 {
+  margin-bottom: 24px;
+  border-left: 5px solid #2277dd;
+  padding-left: 14px;
+  font-size: 28px;
+}
+
+.post-item {
+  padding: 18px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.post-item a {
+  font-size: 24px;
+  color: #2277dd;
+  text-decoration: none;
+}
+
+.post-item p {
+  margin-top: 8px;
+  color: #666;
+  font-size: 18px;
 }
 </style>
 </head>
 <body>
+
 <header>
   <div class="logo">gysbfff</div>
   <div class="hamburger" onclick="toggleMenu()">☰</div>
   <div class="menu" id="navMenu">
     <a href=" ">首页</a >
-    <!-- 后续你可以在这里继续增加导航，例如：<a href="/about">关于我</a > -->
   </div>
 </header>
-<div class="banner"></div>
+
+<div class="banner">
+  <div class="banner-text">
+    <h1>gysbfff的技术博客</h1>
+    <p>关注：网络安全、学习记录、技术实践</p >
+  </div>
+</div>
+
 <div class="container">
   <h2>📖 博客文章</h2>
   {% for post in site.posts %}
   <div class="post-item">
     <a href="{{ post.url }}">{{ post.title }}</a >
-    <p>发布时间：{{ post.date | date:"%Y-%m-%d" }}</p >
+    <p>发布时间：{{ post.date | date: "%Y-%m-%d" }}</p >
   </div>
   {% endfor %}
 </div>
 
 <script>
-function toggleMenu(){
+function toggleMenu() {
   document.getElementById("navMenu").classList.toggle("show");
 }
-// 点击页面空白关闭菜单
-document.addEventListener('click',function(e){
+
+document.addEventListener('click', function(e) {
   const menu = document.getElementById("navMenu");
   const hamburger = document.querySelector(".hamburger");
-  if(!hamburger.contains(e.target) && !menu.contains(e.target)){
+  if (!hamburger.contains(e.target) && !menu.contains(e.target)) {
     menu.classList.remove("show");
   }
-})
+});
 </script>
+
 </body>
 </html>
