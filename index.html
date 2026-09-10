@@ -94,11 +94,12 @@
     <p>关注：网络安全、学习记录、技术实践</p>
 </section>
 
-<div class="content-wrap">
-    <div class="post-item">
-        <a href="./2026/09/08/first.html">第一篇示例文章</a>
-        <div class="post-date">2026‑09‑08</div>
-    </div>
+{% for post in site.posts %}
+<div class="post-item">
+  <h2><a href=" ">{{ post.title }}</a ></h2>
+  <p>{{ post.date | date: "%Y-%m-%d" }}</p >
+</div>
+{% endfor %}
 </div>
 
 </body>
