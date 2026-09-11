@@ -1,5 +1,5 @@
 ---
-title: "Bugku Web Nibixurangtatingxialai"
+title: "Bugku CTF 你必须让他停下来 Writeup"
 date: 2026-09-11
 categories: Bugku CTF
 tags:
