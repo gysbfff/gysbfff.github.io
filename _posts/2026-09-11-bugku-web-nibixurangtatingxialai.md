@@ -15,7 +15,7 @@ tags:
 页面会自动刷新，线索藏在被CSS隐藏的a标签内，只有返回熊猫图片的页面才会出现flag。
 ## 解题步骤
 1. 访问靶机页面，F12打开开发者工具
-2. 使用快捷键`Ctrl+Shift+P`调出命令面板，输入JavaScript，选择Disable JavaScript，禁用JS，页面停止自动刷新
+2. 在设置按钮中找到禁用Java,页面停止自动刷新
 3. 在Elements元素面板找到隐藏标签：`<a style="display:none">flag{xxx}</a >`
 4. 将`display:none`中的`none`修改为`block`，回车确认
 5. 页面上直接展示出完整flag
