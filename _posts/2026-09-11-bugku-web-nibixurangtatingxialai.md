@@ -1,3 +1,8 @@
+---
+title: "Bugku Web Nibixurangtatingxialai"
+date: 2026-09-11
+categories: Bugku CTF
+---
 # 题目：你必须让他停下
 ## 题目描述
 页面每隔0.5秒自动刷新，提示 Stop at panda I u will get flag。
