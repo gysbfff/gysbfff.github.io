@@ -2,6 +2,11 @@
 title: "Bugku Web Nibixurangtatingxialai"
 date: 2026-09-11
 categories: Bugku CTF
+tags:
+  - Bugku
+  - CTF
+  - Web
+  - 前端调试
 ---
 # 题目：你必须让他停下
 ## 题目描述
