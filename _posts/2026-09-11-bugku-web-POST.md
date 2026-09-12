@@ -1,7 +1,7 @@
 ---
-title:"Bugku CTF web 基础$_POST Writeup"
-date:2026-09-11
-categories:Bugku CTF
+title: "Bugku CTF web 基础$_POST Writeup"
+date: 2026-09-11
+categories: Bugku CTF
 tags:
  -Bugku
  -CTF
