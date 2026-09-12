@@ -10,9 +10,9 @@ tags:
  -POST传参
  ---
 
- #题目：web基础$_POST
+ # 题目：web基础$_POST
 
- ##题目描述
+ ## 题目描述
  Web，分值10分。
  页面给出PHP源码：
  ```php
@@ -21,23 +21,23 @@ echo $what;
 if($what=='flag')
 echo 'flag{c6526287b29ce38b5837cf7d79a5d497}';
 
-##解题思路
+## 解题思路
 PHP  $_POST['what']  用于接收POST请求body中的what参数。
 GET参数放在URL里，POST参数放在请求主体，无法直接在地址栏构造。
 需要发送POST请求，提交  what=flag ，满足判断条件即可输出flag。
 
-##解题步骤
+## 解题步骤
 1. 访问靶机页面，查看源代码。
 2. 打开cmd，使用curl发送POST请求：
 3. 执行命令，命令行输出flag。
 
-##解题方法
+## 解题方法
 1. 按下键盘  Win + R ，输入  cmd ，回车，打开命令提示符（黑窗口）
 2. 复制下面这一行命令
 curl -X POST -d "what=flag" http://160.202.254.160:11707
 3. 在cmd窗口粘贴，按下回车发送请求即可出现flag
 
-##总结
+## 总结
 1. $_POST  获取POST请求body提交的数据，参数不会出现在URL。
 2. GET：参数附加在URL；POST：参数放在请求主体。
 3. CTF Web基础，掌握两种不同HTTP传参方式。
