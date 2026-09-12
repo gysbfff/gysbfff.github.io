@@ -1,5 +1,5 @@
 ---
-title:"Bugku CTF web 基础$_POST Writeup
+title:"Bugku CTF web 基础$_POST Writeup"
 date:2026-09-11
 categories:Bugku CTF
 tags:
@@ -15,7 +15,7 @@ tags:
  ## 题目描述
  Web，分值10分。
  页面给出PHP源码：
- ```php
+ ```php```
 $what=$_POST['what'];
 echo $what;
 if($what=='flag')
@@ -42,14 +42,14 @@ curl -X POST -d "what=flag" http://160.202.254.160:11707
 2. GET：参数附加在URL；POST：参数放在请求主体。
 3. CTF Web基础，掌握两种不同HTTP传参方式。
 
-##知识点
+## 知识点
 1.GET 和 POST 区分
 - GET：参数写在网址URL上
 - POST：参数藏在请求体Body里，地址栏看不见
 2.PHP 是服务器端脚本语言，专门用来做网页后端开发。
 -浏览器看到的网页文字是前端（HTML），PHP跑在网站服务器上，负责接收你的参数、做判断、返回内容，Bugku这些Web题基本都是PHP写的。
 
-##容易踩坑的点
+## 容易踩坑的点
 1. POST不是加密！抓包工具（Burp）照样能看见参数内容，只是不显示在网址。
 2. 不要记混： $_GET  对应GET请求； $_POST 对应POST请求，不匹配拿不到数据。
 
