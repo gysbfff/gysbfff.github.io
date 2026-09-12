@@ -1,13 +1,9 @@
 ---
-title: "Bugku CTF web 基础$_POST Writeup"
+layout: post
+title: Bugku CTF web 基础$_POST Writeup
 date: 2026-09-11
 categories: Bugku CTF
-tags:
- -Bugku
- -CTF
- -Web
- -PHP
- -POST传参
+tags: Bugku CTF Web PHP POST传参
  ---
 
  # 题目：web基础$_POST
