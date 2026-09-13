@@ -19,11 +19,29 @@ if(!is_numeric($num))
 
 ## 解题思路
 考点：PHP弱类型比较与 is_numeric() 函数特性。
-1. is_numeric()  检测参数是否为数字字符串， !is_numeric($num) 要求传入的参数不能是纯数字，才能进入代码块。
-2. 内部判断  $num ==1  是弱比较，PHP会自动提取字符串开头的数字进行对比。
-3. 构造 payload： num=1a 
--  is_numeric("1a")  返回false，满足外层if条件
--  "1a" ==1  弱比较结果为true，输出flag
+1. 先搞懂  $_GET['num']  是什么
+ -$_GET  代表URL GET传参，格式: shturl.cc/rzQBJ?参数名=参数值 
+ 这里参数名叫 num ，所以就是： ?num=xxx 
+👉 这就是为什么要在网址后面拼接  ?num=1a 。
+-只要代码出现  $_GET['xxx'] ，就代表可以在URL问号后面构造参数。
+ 如果是  $_POST['xxx'] ，就是POST传参，要在请求体里面传，不是URL。
+2. 分析条件A： !is_numeric($num) 
+   is_numeric(字符串) ：判断这个字符串是不是纯数字
+-  is_numeric("123")  → true
+-  is_numeric("12a3")  → false（包含字母，不是纯数字）
+ !is_numeric  就是取反，必须返回false，所以 num 的值不能是纯数字。
+3. 分析条件B： $num ==1  弱比较
+ PHP双等号 == ：两边类型不一样，PHP会自动把字符串转数字。
+字符串 "1a" 转数字的时候，读到字母就停止，只取前面的数字。
+ "1a"  → 提取开头 1 ，于是  "1a" == 1  → true
+4. 合并两个条件，找出payload
+要求：
+-1. 不是纯数字（带字母）
+-2. 弱比较等于1
+---想到：1后面跟字母， 1a 、 1abc  都满足。
+排除错误尝试:
+-  num=1 ：is_numeric("1")=true →  !true 不成立，进不去大括号
+-  num=a1 ： a1==1  弱比较为false，提取不到数字1
 
 ## 解题步骤
 1. 使用GET传参，构造参数 num=1a 
