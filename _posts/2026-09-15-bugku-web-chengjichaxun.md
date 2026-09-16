@@ -1,8 +1,8 @@
 ---
-title: Bugku Web 成绩查询 SQL 注入
-date: 2026\-09\-15
+title: Bugku Web 成绩查询
+date: 2026-09-15
 categories: CTF
-tags: \[Bugku, Web, SQL 注入\]
+tags: Bugku, Web, SQL 注入
 ---
 
 # 题目: 成绩查询
