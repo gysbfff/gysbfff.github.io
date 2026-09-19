@@ -2,7 +2,7 @@
 title: Bugku CTF 好像需要密码
 date: 2026-09-16
 categories: Bugku,CTF
-tags: CTF,爆破，Python
+tags: Bugku CTF 爆破 Python
 ---
 
 # 题目：好像需要密码
