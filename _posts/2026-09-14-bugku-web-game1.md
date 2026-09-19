@@ -2,7 +2,7 @@
 title: Bugku CTF game1 来啊盖楼啊
 date: 2026-09-15
 categories: CTF
-tags: Bugku, Web, JS审计
+tags: Bugku Web JS审计
 ---
 
 # 题目:  game1 来啊盖楼啊
