@@ -1,0 +1,23 @@
+---
+layout: page
+title: 全部标签
+---
+
+<h1>🏷️ 标签归档</h1>
+{% capture tags %}
+  {% for tag in site.tags %}
+    {{ tag[0] }}
+  {% endfor %}
+{% endcapture %}
+{% assign sortedtags = tags | split:' ' | sort %}
+
+{% for tag in sortedtags %}
+  {% if tag != "" %}
+    <h2 id="{{ tag }}">{{ tag }}（{{ site.tags[tag].size }}篇）</h2>
+    <ul>
+      {% for post in site.tags[tag] %}
+      <li><a href=" ">{{ post.title }}</a ></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endfor %}
