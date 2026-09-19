@@ -2,7 +2,7 @@
 title: Bugku CTF 把猪困在猪圈里
 date: 2026-09-14
 categories: CTF, Bugku, Crypto
-tags: Crypto, base64, 猪圈密码, Pigpen
+tags: Bugku,Crypto, base64, 猪圈密码, Pigpen
 ---
 
 # 题目：把猪困在猪圈里
