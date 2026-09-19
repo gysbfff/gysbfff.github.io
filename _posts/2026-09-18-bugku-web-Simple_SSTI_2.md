@@ -2,7 +2,7 @@
 title: Bugku CTF Simple_SSTI_2
 date: 2026-09-18
 categories: CTF
-tags: CTF,Web,SSTI,Jinja2,模板注入，Flask，命令执行
+tags: Bugku CTF Web SSTI Jinja2模板注入 Flask 命令执行
 ---
 
 # 题目：Bugku CTF Simple_SSTI_2
