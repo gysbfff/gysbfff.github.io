@@ -2,7 +2,7 @@
 title: Bugku CTF Crypto|/.-
 date: 2026-09-12
 categories: CTF,Crypto
-tags: 摩斯密码
+tags: Bugku,摩斯密码
 ---
 
 # 题目： /.-
