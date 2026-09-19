@@ -1,12 +1,7 @@
 ---
 layout: page
-title: CTF CTFHub
+title: CTFHub Writeups
 ---
 
-# CTFHub CTF Writeups
-<ul>
-{% assign posts = site.posts | where_exp:"item","item.categories contains 'CTFHub'" %}
-{% for post in posts %}
-<li><a href=" ">{{post.title}}</a ></li>
-{% endfor %}
-</ul>
+# CTFHub Writeups
+所有CTFHub平台CTF题解汇总页面。
