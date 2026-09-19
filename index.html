@@ -3,6 +3,16 @@ layout: default
 title: 首页
 ---
 
+<!-- 懒羊羊横幅 -->
+<div class="banner" style="width:100%;">
+  < img src="/banner.jpg" style="width:100%;border-radius:12px;">
+  <div style="text-align:center;margin-top:-120px;color:white;text-shadow: 2px 2px 4px #000;">
+    <h1>gysbfff的技术博客</h1>
+    <p>关注：网络安全、学习记录、技术实践</p >
+  </div>
+</div>
+
+<!-- CTF卡片CSS -->
 <style>
 .home-wrap {
   max-width: 800px;
@@ -26,7 +36,7 @@ title: 首页
   gap:30px;
 }
 .ctf-card{
-  background:#222630;
+  background:rgba(34, 38, 48,0.85);
   border-radius:24px;
   padding:40px;
   cursor:pointer;
@@ -34,7 +44,7 @@ title: 首页
 }
 .ctf-card:hover{
   transform: translateY(-6px);
-  background:#282d38;
+  background:rgba(40, 45, 56,0.9);
 }
 .card-platform{
   color:#82aaff;
@@ -56,6 +66,13 @@ title: 首页
   font-size:1.5rem;
   margin-top:20px;
 }
+.ctf-card a{
+  text-decoration:none;
+  color:inherit;
+  display:block;
+  width:100%;
+  height:100%;
+}
 </style>
 
 <div class="home-wrap">
@@ -64,8 +81,8 @@ title: 首页
 
   <div class="card-grid">
     <!-- Bugku卡片 -->
-    <a href=" " style="text-decoration:none;">
-      <div class="ctf-card">
+    <div class="ctf-card">
+      <a href=" ">
         <p class="card-platform">BUGKU CTF</p >
         <h2 class="card-title">Bugku</h2>
         <p class="card-desc">Web、Misc、Crypto、Reverse、PWN<br>等入门题目的解题记录。</p >
@@ -73,12 +90,12 @@ title: 首页
           {% assign bugku_posts = site.posts | where_exp:"item","item.categories contains 'Bugku'" %}
           {{ bugku_posts.size }} 篇
         </div>
-      </div>
-    </a >
+      </a >
+    </div>
 
     <!-- CTFHub卡片 -->
-    <a href="/categories/ctfhub" style="text-decoration:none;">
-      <div class="ctf-card">
+    <div class="ctf-card">
+      <a href="/categories/ctfhub">
         <p class="card-platform">CTFHUB</p >
         <h2 class="card-title">CTFHub</h2>
         <p class="card-desc">CTFHub 技能树与综合题目的解题记录。</p >
@@ -86,7 +103,20 @@ title: 首页
           {% assign ctfhub_posts = site.posts | where_exp:"item","item.categories contains 'CTFHub'" %}
           {{ ctfhub_posts.size }} 篇
         </div>
-      </div>
-    </a >
+      </a >
+    </div>
   </div>
+</div>
+
+<!-- 博客文章列表 -->
+<div style="max-width:800px;margin:0 auto;padding:0 20px;">
+  <h2>📖 博客文章</h2>
+  <ul style="padding:0;">
+    {% for post in site.posts %}
+    <li style="list-style:none;margin:20px 0;border-bottom:1px solid #eee;padding-bottom:16px;">
+      <a href="{{ post.url }}" style="font-size:2rem;color:#0066cc;text-decoration:none;">{{ post.title }}</a >
+      <p style="color:#666;font-size:1.1rem;">发布时间：{{ post.date | date: "%Y-%m-%d" }}</p >
+    </li>
+    {% endfor %}
+  </ul>
 </div>
