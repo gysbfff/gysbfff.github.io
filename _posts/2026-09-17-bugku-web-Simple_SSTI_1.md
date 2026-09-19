@@ -2,7 +2,7 @@
 title: Bugku CTF Simple_SSTI_1
 date: 2026-09-17
 categories: Bugku,Web
-tags: Web, SSTI, Jinja2, Flask模板注入
+tags: Bugku Web SSTI Jinja2 Flask模板注入
 ---
 
 # 题目：Simple_SSTI_1
