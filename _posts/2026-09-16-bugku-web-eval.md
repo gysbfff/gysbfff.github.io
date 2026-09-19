@@ -2,7 +2,7 @@
 title: Bugku CTF eval
 date: 2026-09-16
 categories: CTF
-tags: Bugku, Web, PHP, eval注入, 文件读取
+tags: Bugku Web PHP eval注入 文件读取
 ---
 
 # 题目: eval
