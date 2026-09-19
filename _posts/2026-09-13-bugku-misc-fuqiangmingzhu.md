@@ -5,7 +5,7 @@ categories： CTF，Bugku，Misc
 tags: 核心价值观编码，十六进制，Python
 ---
 
-# 题目: 富强民主
+# 题目: Bug CTF 富强民主
 
 ## 题目描述
 本题属于Misc题型。页面没有附件，描述是一长串连续的社会主义核心价值观词语，需要解码得到flag。
