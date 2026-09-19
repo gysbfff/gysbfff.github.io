@@ -2,7 +2,7 @@
 layout: post # 这里指定使用post布局
 title: CTF 这是一张单纯的图片
 categories: CTF，micsc
-tags: Bugku,misc
+tags: Bugku misc
 ---
 
 # 题目信息
