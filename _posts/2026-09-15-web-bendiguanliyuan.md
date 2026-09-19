@@ -2,7 +2,7 @@
 title: Bugku CTF 本地管理员
 date: 2026-09-15
 categories: CTF, Web
-tags: XFF头伪造, HTTP请求头, 源码审计, POST传参
+tags: Bugku XFF头伪造 HTTP请求头 源码审计 POST传参
 ---
 
 # 题目：Bugku CTF 本地管理员
