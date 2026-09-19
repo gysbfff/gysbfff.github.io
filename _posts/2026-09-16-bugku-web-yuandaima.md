@@ -2,7 +2,7 @@
 title: Bugku CTF 源代码
 date: 2026-09-16
 categories: CTF
-tags: Bugku, Web, JS审计, escape编码, CyberChef
+tags: Bugku Web JS审计 escape编码 CyberChef
 ---
 
 # 题目: 源代码
