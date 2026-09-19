@@ -2,7 +2,11 @@
 title: Bugku CTF｜聪明的小羊
 date: 2026-09-12
 categories: CTF, Crypto
-tags: Bugku,栅栏密码, rail fence
+tags: 
+-Bugku
+-栅栏密码
+-rail
+-fence
 ---
 
 # 聪明的小羊
