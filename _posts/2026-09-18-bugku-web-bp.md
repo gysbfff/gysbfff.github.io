@@ -2,7 +2,7 @@
 tittle: Bugku CTF bp
 date: 2026-09-18
 categories: CTF
-tags: web,爆破,BurpSuite,弱口令
+tags: Bugku web 爆破 BurpSuite 弱口令
 ---
 # 题目：Bugku CTF bp
 
