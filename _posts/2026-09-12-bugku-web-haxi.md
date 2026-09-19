@@ -2,7 +2,7 @@
 title: Bugku CTF Git泄露
 date: 2026-09-12
 categories: CTF
-tags: Bugku,Git
+tags: Bugku Git
 ---
 ## 题目描述
 访问页面发现存在.git目录泄露，通过下载git仓库，查看提交历史找到flag。
