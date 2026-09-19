@@ -2,7 +2,7 @@
 title: Bugku CTF 富强民主
 date: 2026-09-13
 categories: CTF，Bugku，Misc
-tags: Bugku,核心价值观编码，十六进制，Python
+tags: Bugku 核心价值观编码 十六进制 Python
 ---
 
 # 题目: Bug CTF 富强民主
