@@ -3,89 +3,151 @@ layout: default
 title: 首页
 ---
 
-<!-- 懒羊羊横幅 -->
-<div class="banner" style="width:100%;">
-  < img src="/banner.jpg" style="width:100%;border-radius:12px;">
-  <div style="text-align:center;margin-top:-120px;color:white;text-shadow: 2px 2px 4px #000;">
-    <h1>gysbfff的技术博客</h1>
-    <p>关注：网络安全、学习记录、技术实践</p >
-  </div>
+<!-- 顶部：懒羊羊横幅 -->
+<div style="width:100%;margin:0;padding:0;">
+  < img src="/banner.jpg" style="width:100%;display:block;" alt="banner">
 </div>
 
-<!-- CTF卡片CSS -->
 <style>
-.home-wrap {
-  max-width: 800px;
-  margin: 4rem auto;
-  padding: 0 20px;
-  font-family: system-ui;
+body {
+  background: #f5f5f5;
 }
-.hero-title{
-  text-align:center;
-  font-size: 4rem;
-  margin-bottom:0;
+
+.page-header {
+  display: none;
 }
-.hero-sub{
-  text-align:center;
-  color:#666;
-  font-size:1.3rem;
-  margin-bottom:50px;
+
+.home-layout {
+  background: #f5f5f5;
+  padding: 40px 20px 60px;
 }
-.card-grid{
-  display:grid;
-  gap:30px;
+
+.home-title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 800;
+  color: #111;
+  margin: 0 0 6px;
 }
-.ctf-card{
-  background:rgba(34, 38, 48,0.85);
-  border-radius:24px;
-  padding:40px;
-  cursor:pointer;
-  transition: 0.3s ease;
+
+.home-subtitle {
+  text-align: center;
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 30px;
 }
-.ctf-card:hover{
-  transform: translateY(-6px);
-  background:rgba(40, 45, 56,0.9);
+
+.card-list {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
-.card-platform{
-  color:#82aaff;
-  font-size:1.2rem;
-  margin:0;
+
+.platform-card {
+  background: #1f2937;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
 }
-.card-title{
-  font-size:4rem;
-  color:#fff;
-  margin:8px 0;
+
+.platform-card a {
+  display: block;
+  padding: 22px 24px;
+  color: #fff;
+  text-decoration: none;
 }
-.card-desc{
-  color:#b0b8c4;
-  font-size:1.1rem;
-  line-height:1.6;
+
+.card-label {
+  font-size: 13px;
+  color: #93c5fd;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
 }
-.card-count{
-  color:#cccccc;
-  font-size:1.5rem;
-  margin-top:20px;
+
+.card-name {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 10px;
 }
-.ctf-card a{
-  text-decoration:none;
-  color:inherit;
-  display:block;
-  width:100%;
-  height:100%;
+
+.card-desc {
+  font-size: 14px;
+  color: #d1d5db;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.card-count {
+  font-size: 15px;
+  color: #e5e7eb;
+  font-weight: 700;
+}
+
+.post-section {
+  max-width: 820px;
+  margin: 40px auto 0;
+  background: #fff;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.post-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #111;
+  margin-top: 0;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-list li {
+  border-bottom: 1px solid #eee;
+  padding: 14px 0;
+}
+
+.post-list li:last-child {
+  border-bottom: none;
+}
+
+.post-list a {
+  font-size: 17px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.post-list a:hover {
+  text-decoration: underline;
+}
+
+.post-date {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
 }
 </style>
 
-<div class="home-wrap">
-  <h1 class="hero-title">CTF Writeups</h1>
-  <p class="hero-sub">按平台整理题目与解题记录</p >
+<div class="home-layout">
+  <h1 class="home-title">CTF Writeups</h1>
+  <p class="home-subtitle">按平台整理题目与解题记录</p >
 
-  <div class="card-grid">
-    <!-- Bugku卡片 -->
-    <div class="ctf-card">
+  <div class="card-list">
+    <div class="platform-card">
       <a href=" ">
-        <p class="card-platform">BUGKU CTF</p >
-        <h2 class="card-title">Bugku</h2>
-        <p class="card-desc">Web、Misc、Crypto、Reverse、PWN<br>等入门题目的解题记录。</p >
+        <div class="card-label">BUGKU CTF</div>
+        <h2 class="card-name">Bugku</h2>
+        <div class="card-desc">
+          Web、Misc、Crypto、Reverse、PWN<br>
+          等入门题目的解题记录。
+        </div>
         <div class="card-count">
           {% assign bugku_posts = site.posts | where_exp:"item","item.categories contains 'Bugku'" %}
           {{ bugku_posts.size }} 篇
@@ -93,12 +155,13 @@ title: 首页
       </a >
     </div>
 
-    <!-- CTFHub卡片 -->
-    <div class="ctf-card">
+    <div class="platform-card">
       <a href="/categories/ctfhub">
-        <p class="card-platform">CTFHUB</p >
-        <h2 class="card-title">CTFHub</h2>
-        <p class="card-desc">CTFHub 技能树与综合题目的解题记录。</p >
+        <div class="card-label">CTFHUB</div>
+        <h2 class="card-name">CTFHub</h2>
+        <div class="card-desc">
+          CTFHub 技能树与综合题目的解题记录。
+        </div>
         <div class="card-count">
           {% assign ctfhub_posts = site.posts | where_exp:"item","item.categories contains 'CTFHub'" %}
           {{ ctfhub_posts.size }} 篇
@@ -106,17 +169,16 @@ title: 首页
       </a >
     </div>
   </div>
-</div>
 
-<!-- 博客文章列表 -->
-<div style="max-width:800px;margin:0 auto;padding:0 20px;">
-  <h2>📖 博客文章</h2>
-  <ul style="padding:0;">
-    {% for post in site.posts %}
-    <li style="list-style:none;margin:20px 0;border-bottom:1px solid #eee;padding-bottom:16px;">
-      <a href="{{ post.url }}" style="font-size:2rem;color:#0066cc;text-decoration:none;">{{ post.title }}</a >
-      <p style="color:#666;font-size:1.1rem;">发布时间：{{ post.date | date: "%Y-%m-%d" }}</p >
-    </li>
-    {% endfor %}
-  </ul>
+  <div class="post-section">
+    <h2 class="post-title">博客文章</h2>
+    <ul class="post-list">
+      {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a >
+        <div class="post-date">发布时间：{{ post.date | date: "%Y-%m-%d" }}</div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
