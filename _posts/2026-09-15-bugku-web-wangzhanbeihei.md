@@ -2,7 +2,7 @@
 title: Bugku CTF 网站被黑
 date: 2026-09-15
 categories: CTF, Web
-tags: 目录扫描, webshell后门, 弱口令爆破
+tags: Bugku 目录扫描 webshell后门 弱口令爆破
 ---
 
 # 题目： Bugku CTF 网站被黑
