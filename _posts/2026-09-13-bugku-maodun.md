@@ -2,7 +2,7 @@
 title: Bugku CTF 矛盾
 date: 2026-09-13
 categories: CTF
-tags: Web,PHP弱类型,is_numeric
+tags: Bugku,Web,PHP弱类型,is_numeric
 ---
 
 # 题目：矛盾
