@@ -2,7 +2,7 @@
 title: Bugku CTF 变量1
 date: 2026-09-13
 categories: CTF,Bugku,Web
-tags: PHP,可变变量，eval,$GLOBALS
+tags: Bugku,PHP,可变变量，eval,$GLOBALS
 ---
 
 # 题目：变量1
