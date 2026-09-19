@@ -2,7 +2,7 @@
 title: Bugku CTF [+-<>]
 date: 2026-09-13
 category: CTF
-tags: Bugku,Crypto,Brainfuck
+tags: Bugku Crypto Brainfuck
 ---
 
 # 题目：[+-<>]
