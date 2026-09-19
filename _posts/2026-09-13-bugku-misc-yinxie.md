@@ -2,7 +2,7 @@
 title: Bugku CTF 隐写
 date: 2026-09-13
 categories: CTF,Bugku,Misc
-tags: Bugku,png, IHDR,图片隐写，Python
+tags: Bugku png IHDR 图片隐写 Python
 ---
 
 ## 题目：隐写
