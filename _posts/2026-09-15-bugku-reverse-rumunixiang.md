@@ -2,7 +2,7 @@
 title: Bugku CTF 入门逆向 baby.exe
 date: 2026-09-15
 categories: CTF, Bugku, Reverse
-tags: Reverse, 逆向入门, PE程序分析, ASCII解码, Python脚本
+tags: Bugku Reverse 逆向入门 PE程序分析 ASCII解码 Python脚本
 ---
  
 # 题目： Bugku CTF 入门逆向 
