@@ -2,7 +2,7 @@
 title: Bugku CTF ok
 date: 2026-09-13
 categories: CTF
-tags: Bugku,Crypto,Ook!
+tags: Bugku Crypto Ook!
 ---
 
 # 题目: ok
