@@ -2,7 +2,7 @@
 title: Bug CTF 备份是个好习惯
 date: 2026-09-14
 categories: CTF,Bugku,Web
-tags: Bugku,备份泄露，bak源码泄露，MD5弱类型绕过，双写绕过过滤，parse_str
+tags: Bugku 备份泄露 bak源码泄露 MD5弱类型绕过 双写绕过过滤 parse_str
 ---
 
 # 题目: 备份是个好习惯
