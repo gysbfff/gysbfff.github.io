@@ -4,16 +4,28 @@ title: CTF刷题首页
 ---
 
 <style>
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-image: url("/lazy.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.35);
+  background-blend-mode: multiply;
+}
 .home-title {
   text-align: center;
   font-size: 48px;
   font-weight: bold;
-  color: #111;
+  color: #ffffff;
   margin: 40px 0 8px;
 }
 .home-subtitle {
   text-align: center;
-  color: #666;
+  color: #eeeeee;
   font-size: 20px;
   margin-bottom: 40px;
 }
@@ -25,11 +37,12 @@ title: CTF刷题首页
   padding: 0 20px;
 }
 .ctf-card {
-  background: #1f2937;
+  background: rgba(31, 41, 55, 0.5);
   border-radius: 24px;
   padding: 40px;
   cursor: pointer;
   color: white;
+  backdrop-filter: blur(8px);
 }
 .card-platform {
   color: #82aaff;
@@ -54,6 +67,15 @@ title: CTF刷题首页
   max-width: 800px;
   margin: 50px auto 0;
   padding: 0 20px;
+}
+.post-wrap h2 {
+  color: white;
+}
+.post-wrap a {
+  color: #82aaff !important;
+}
+.post-wrap p {
+  color: #ddd;
 }
 </style>
 
@@ -99,9 +121,9 @@ document.querySelectorAll('.ctf-card').forEach(function(card) {
   <h2>📖 博客文章</h2>
   <ul style="padding:0;list-style:none;">
     {% for post in site.posts %}
-    <li style="margin:20px 0;border-bottom:1px solid #eee;padding-bottom:16px;">
+    <li style="margin:20px 0;border-bottom:1px solid #444;padding-bottom:16px;">
       <a href=" " style="font-size:2rem;color:#0066cc;text-decoration:none;">{{ post.title }}</a >
-      <p style="color:#666;">发布时间：{{ post.date | date: "%Y-%m-%d" }}</p >
+      <p style="color:#ddd;">发布时间：{{ post.date | date: "%Y-%m-%d" }}</p >
     </li>
     {% endfor %}
   </ul>
