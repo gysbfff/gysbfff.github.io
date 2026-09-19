@@ -1,12 +1,7 @@
 ---
 layout: page
-title: CTF Bugku
+title: Bugku CTF Writeups
 ---
 
 # Bugku CTF Writeups
-<ul>
-{% assign posts = site.posts | where_exp:"item","item.categories contains 'Bugku'" %}
-{% for post in posts %}
-<li><a href=" ">{{post.title}}</a ></li>
-{% endfor %}
-</ul>
+所有Bugku平台CTF题解汇总页面。
