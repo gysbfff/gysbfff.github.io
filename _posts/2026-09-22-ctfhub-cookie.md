@@ -24,11 +24,7 @@ Cookie欺骗：服务端直接信任客户端提交的Cookie内容，没有在�
 
 ## 踩坑指南
 1. HTTP请求头`Cookie`，发送后如没反应要再检查一遍请求头是否有误
-2. 区分：`Set-Cookie`是**服务器返回给浏览器**；`Cookie`是**浏览器发给服务器**的请求头。 HTTP协议
-tags: CTFHub Cookie欺骗 Web入门
----
-
-# 题目：CTFHub HTTP请求协议 Cookie
+2. 区分：`Set-Cookie`是**服务器返回给浏览器**；`Cookie`是**浏览器发给服务器**的请求头。 
 
 ## 题目描述
 访问靶场页面，页面输出'hello guest.only admin can get flag.'，提示只有admin管理员才能获取flag。
