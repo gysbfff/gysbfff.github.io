@@ -1,7 +1,7 @@
 ---
 title: Bugku CTF 计算器
 date: 2026-09-11
-categories: [CTF, Web]
+categories: [CTF, Web,Bugku]
 tags: [Bugku,前端绕过,maxlength]
 ---
 
