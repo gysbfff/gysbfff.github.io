@@ -15,32 +15,78 @@ body {
     background-attachment: fixed;
 }
 .bg-mask {
-    background-color: rgba(255,255,255,0.72);
+    background-color: rgba(0,0,0,0.55);
     min-height: 100vh;
-    padding:30px 10px;
+    padding:30px 16px;
+    color:#fff;
+    font-family: system-ui;
+}
+.container{
+    max-width:700px;
+    margin:0 auto;
+}
+.back-link{
+    font-size:20px;
+    color:#88aaff;
+    text-decoration:none;
+    margin-bottom:30px;
+    display:inline-block;
+}
+h1{
+    font-size:48px;
+    margin:0 0 8px;
+}
+.count-text{
+    color:#b8c2d0;
+    font-size:18px;
+    margin-bottom:40px;
+}
+.item-card{
+    background:rgba(40,40,45,0.75);
+    border-radius:18px;
+    padding:24px;
+    margin-bottom:16px;
+}
+.item-card a{
+    font-size:24px;
+    color:#ffffff;
+    text-decoration:none;
+    display:block;
+    margin-bottom:12px;
+}
+.item-date{
+    color:#b8c2d0;
+    font-size:16px;
 }
 </style>
 </head>
 <body>
 <div class="bg-mask">
-    <div style="text-align:center;margin:30px 0;">
-        <h1>CTFHub 题解</h1>
-        <a href=" ">← 返回博客首页</a >
-    </div>
+    <div class="container">
+        <a href=" " class="back-link">← 返回总入口</a >
+        <h1>CTFHub</h1>
+        {% assign ctfhub_count = 0 %}
+        {% for post in site.posts %}
+            {% if post.categories contains "CTFHub" %}
+                {% assign ctfhub_count = ctfhub_count | plus:1 %}
+            {% endif %}
+        {% endfor %}
+        <div class="count-text">共 {{ ctfhub_count }} 篇解题记录</div>
 
-    <h2>文章列表</h2>
-    <ul>
         {% assign has_post = false %}
         {% for post in site.posts %}
             {% if post.categories contains "CTFHub" %}
-                <li><a href="{{ post.url }}">{{ post.title }}</a ></li>
-                {% assign has_post = true %}
+            <div class="item-card">
+                <a href="{{ post.url }}">{{ post.title }}</a >
+                <div class="item-date">{{ post.date | date: "%Y-%m-%d" }}</div>
+            </div>
+            {% assign has_post = true %}
             {% endif %}
         {% endfor %}
         {% if has_post == false %}
-            <li>暂时没有CTFHub分类的文章，请检查文章categories！</li>
+            <div class="item-card">暂无文章</div>
         {% endif %}
-    </ul>
+    </div>
 </div>
 </body>
 </html>
