@@ -3,39 +3,60 @@
 <head>
 <meta charset="utf-8">
 <title>CTF Writeups</title>
+<style>
+/* 全局背景 */
+body {
+    margin: 0;
+    padding: 0;
+    /* 背景图 lazy.jpg */
+    background: url("lazy.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* 半透明遮罩，让文字看得清楚 */
+.bg-mask {
+    background-color: rgba(255,255,255,0.72);
+    min-height: 100vh;
+    padding:30px 10px;
+}
+</style>
 </head>
 <body>
-<div style="text-align:center;">
-<h1>CTF Writeups</h1>
-<p>按平台整理题目与解题记录</p >
-</div>
+<div class="bg-mask">
+    <div style="text-align:center;">
+    <h1>CTF Writeups</h1>
+    <p>平台分类整理题目与解题记录</p >
+    </div>
 
-<div style="max-width:800px;margin:30px auto;padding:0 20px;display:grid;gap:24px;">
-<!-- Bugku卡片 -->
-<div style="border-radius:24px;padding:36px;background:rgba(255,255,255,0.75);backdrop-filter:blur(8px);">
-<div style="color:#2563eb;font-size:1.3rem;">BUGKU CTF</div>
-<div style="font-size:3.6rem;margin:4px 0 12px;">
-<a href=" " style="text-decoration:none;color:inherit;">Bugku</a >
-</div>
-<div style="font-size:1.1rem;line-height:1.6;">Web、Misc、Crypto、Reverse、PWN<br>等入门题目的解题记录。</div>
-<div style="margin-top:20px;font-size:1.4rem;">
-{% assign bugku_posts = site.posts | where_exp:"item","item.categories[0] == 'Bugku'" %}
-{{ bugku_posts.size }} 篇
-</div>
-</div>
+    <div style="max-width:800px;margin:30px auto;padding:0 20px;display:grid;gap:24px;">
 
-<!-- CTFHub卡片 -->
-<div style="border-radius:24px;padding:36px;background:rgba(255,255,255,0.75);">
-<div style="color:#2563eb;font-size:1.3rem;">CTFHUB</div>
-<div style="font-size:3.6rem;margin:4px 0 12px;">
-<a href="/ctfhub.html" style="text-decoration:none;color:inherit;">CTFHub</a >
-</div>
-<div style="font-size:1.1rem;line-height:1.6;">CTFHub 技能树与综合题目的解题记录。</div>
-<div style="margin-top:20px;font-size:1.4rem;">
-{% assign ctfhub_posts = site.posts | where_exp:"item","item.categories[0] == 'CTFHub'" %}
-{{ ctfhub_posts.size }} 篇
-</div>
-</div>
+    <!-- Bugku卡片 -->
+    <div style="border-radius:24px;padding:36px;background:rgba(255,255,255,0.75);backdrop-filter:blur(8px);">
+    <div style="color:#2563eb;font-size:1.3rem;">BUGKU CTF</div>
+    <div style="font-size:3.6rem;margin:4px 0 12px;">
+    <a href=" " style="text-decoration:none;color:inherit;">Bugku</a >
+    </div>
+    <div style="font-size:1.1rem;line-height:1.6;">Web、Misc、Crypto、Reverse、PWN等入门题目的解题记录。</div>
+    <div style="margin-top:20px;font-size:1.4rem;">
+    {% assign bugku_posts = site.posts | where_exp:"item","item.categories[0] == 'Bugku'" %}
+    {{ bugku_posts.size }} 篇
+    </div>
+    </div>
+
+    <!-- CTFHub卡片 -->
+    <div style="border-radius:24px;padding:36px;background:rgba(255,255,255,0.75);backdrop-filter:blur(8px);">
+    <div style="color:#2563eb;font-size:1.3rem;">CTFHUB</div>
+    <div style="font-size:3.6rem;margin:4px 0 12px;">
+    <a href="/ctfhub.html" style="text-decoration:none;color:inherit;">CTFHub</a >
+    </div>
+    <div style="font-size:1.1rem;line-height:1.6;">CTFHub 技能树与综合题目的解题记录。</div>
+    <div style="margin-top:20px;font-size:1.4rem;">
+    {% assign ctfhub_posts = site.posts | where_exp:"item","item.categories[0] == 'CTFHub'" %}
+    {{ ctfhub_posts.size }} 篇
+    </div>
+    </div>
+
+    </div>
 </div>
 </body>
 </html>
