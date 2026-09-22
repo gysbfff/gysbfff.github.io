@@ -1,5 +1,5 @@
 ---
-title: 302跳转
+title: CTFHub HTTP请求协议 302跳转
 date: 2026-09-21
 categories: CTFHub
 tags: CTFHub Web HTTP协议 302跳转
