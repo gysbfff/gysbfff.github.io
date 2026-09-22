@@ -2,7 +2,7 @@
 title: Bugku CTF alert 签到题
 
 date: 2026-09-11
-categories: [CTF, Web]
+categories: [CTF, Web,Bugku]
 tags: [Bugku, HTML注释, HTML实体编码, Python解码]
 ---
 
