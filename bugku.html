@@ -71,28 +71,18 @@ h1 {
 <body>
 <div class="bg-mask">
     <div class="container">
-        <a href=" " class="index.html">← 返回总入口</a >
+        <a href=" " class="back-link">← 返回总入口</a >
 
         <h1>Bugku</h1>
-
-        {% assign bugku_count = 0 %}
-        {% for post in site.posts %}
-            {% if post.categories contains "Bugku" %}
-                {% assign bugku_count = bugku_count | plus: 1 %}
-            {% endif %}
-        {% endfor %}
-
-        <div class="count-text">共 {{ bugku_count }} 篇解题记录</div>
+        <div class="count-text">共 {{ site.tags.Bugku.size }} 篇解题记录</div>
 
         {% assign has_post = false %}
-        {% for post in site.posts %}
-            {% if post.categories contains "Bugku" %}
-                <div class="item-card">
-                    <a href="{{ post.url }}">{{ post.title }}</a >
-                    <div class="item-date">{{ post.date | date: "%Y-%m-%d" }}</div>
-                </div>
-                {% assign has_post = true %}
-            {% endif %}
+        {% for post in site.tags.Bugku %}
+            <div class="item-card">
+                <a href="{{ post.url }}">{{ post.title }}</a >
+                <div class="item-date">{{ post.date | date: "%Y-%m-%d" }}</div>
+            </div>
+            {% assign has_post = true %}
         {% endfor %}
 
         {% if has_post == false %}
