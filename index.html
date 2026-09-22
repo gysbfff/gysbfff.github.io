@@ -29,6 +29,9 @@ title: CTF Writeups
   transition:0.25s;
   background: rgba(255,255,255,0.75);
   backdrop-filter: blur(8px);
+  /* 重点修复这两行，让链接可以点击 */
+  position: relative;
+  z-index: 10;
 }
 .platform-card:hover{
   background: rgba(255,255,255,0.9);
@@ -52,6 +55,13 @@ title: CTF Writeups
 .platform-card a{
   text-decoration:none;
   color:inherit;
+  /* 提升a标签点击层级 */
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:20;
 }
 </style>
 
@@ -64,7 +74,7 @@ title: CTF Writeups
 {% assign bugku_posts = site.posts | where_exp:"item","item.categories[0] == 'Bugku'" %}
 {% assign ctfhub_posts = site.posts | where_exp:"item","item.categories[0] == 'CTFHub'" %}
 
-<!-- Bugku卡片 -->
+<!-- Bugku卡片，href末尾加上 / -->
 <a href=" ">
 <div class="platform-card">
 <div class="card-tag">BUGKU CTF</div>
@@ -74,7 +84,7 @@ title: CTF Writeups
 </div>
 </a >
 
-<!-- CTFHub卡片 -->
+<!-- CTFHub卡片，href末尾加上 / -->
 <a href="/CTFHub/">
 <div class="platform-card">
 <div class="card-tag">CTFHUB</div>
