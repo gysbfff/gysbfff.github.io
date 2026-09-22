@@ -1,96 +1,41 @@
----
-layout: home
-title: CTF Writeups
----
-
-<style>
-.hero-title {
-  text-align: center;
-  padding: 40px 20px 20px;
-}
-.hero-title h1 {
-  font-size: 4rem;
-  font-weight: 600;
-  margin:0;
-}
-.hero-title p {
-  font-size:1.2rem;
-}
-.platform-card-wrap{
-  max-width:800px;
-  margin: 30px auto;
-  padding:0 20px;
-  display:grid;
-  gap:24px;
-}
-.platform-card{
-  border-radius:24px;
-  padding:36px;
-  transition:0.25s;
-  background: rgba(255,255,255,0.75);
-  backdrop-filter: blur(8px);
-  /* 重点修复这两行，让链接可以点击 */
-  position: relative;
-  z-index: 10;
-}
-.platform-card:hover{
-  background: rgba(255,255,255,0.9);
-}
-.card-tag{
-  color:#2563eb;
-  font-size:1.3rem;
-}
-.card-title{
-  font-size:3.6rem;
-  margin: 4px 0 12px;
-}
-.card-desc{
-  font-size:1.1rem;
-  line-height:1.6;
-}
-.card-count{
-  margin-top:20px;
-  font-size:1.4rem;
-}
-.platform-card a{
-  text-decoration:none;
-  color:inherit;
-  /* 提升a标签点击层级 */
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  z-index:20;
-}
-</style>
-
-<div class="hero-title">
-# CTF Writeups
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CTF Writeups</title>
+</head>
+<body>
+<div style="text-align:center;">
+<h1>CTF Writeups</h1>
 <p>按平台整理题目与解题记录</p >
 </div>
 
-<div class="platform-card-wrap">
+<div style="max-width:800px;margin:30px auto;padding:0 20px;display:grid;gap:24px;">
+<!-- Bugku卡片 -->
+<div style="border-radius:24px;padding:36px;background:rgba(255,255,255,0.75);backdrop-filter:blur(8px);">
+<div style="color:#2563eb;font-size:1.3rem;">BUGKU CTF</div>
+<div style="font-size:3.6rem;margin:4px 0 12px;">
+<a href=" " style="text-decoration:none;color:inherit;">Bugku</a >
+</div>
+<div style="font-size:1.1rem;line-height:1.6;">Web、Misc、Crypto、Reverse、PWN<br>等入门题目的解题记录。</div>
+<div style="margin-top:20px;font-size:1.4rem;">
 {% assign bugku_posts = site.posts | where_exp:"item","item.categories[0] == 'Bugku'" %}
+{{ bugku_posts.size }} 篇
+</div>
+</div>
+
+<!-- CTFHub卡片 -->
+<div style="border-radius:24px;padding:36px;background:rgba(255,255,255,0.75);">
+<div style="color:#2563eb;font-size:1.3rem;">CTFHUB</div>
+<div style="font-size:3.6rem;margin:4px 0 12px;">
+<a href="/ctfhub.html" style="text-decoration:none;color:inherit;">CTFHub</a >
+</div>
+<div style="font-size:1.1rem;line-height:1.6;">CTFHub 技能树与综合题目的解题记录。</div>
+<div style="margin-top:20px;font-size:1.4rem;">
 {% assign ctfhub_posts = site.posts | where_exp:"item","item.categories[0] == 'CTFHub'" %}
-
-<!-- Bugku卡片，href末尾加上 / -->
-<a href=" ">
-<div class="platform-card">
-<div class="card-tag">BUGKU CTF</div>
-<div class="card-title">Bugku</div>
-<div class="card-desc">Web、Misc、Crypto、Reverse、PWN<br>等入门题目的解题记录。</div>
-<div class="card-count">{{ bugku_posts.size }} 篇</div>
+{{ ctfhub_posts.size }} 篇
 </div>
-</a >
-
-<!-- CTFHub卡片，href末尾加上 / -->
-<a href="/CTFHub/">
-<div class="platform-card">
-<div class="card-tag">CTFHUB</div>
-<div class="card-title">CTFHub</div>
-<div class="card-desc">CTFHub 技能树与综合题目的解题记录。</div>
-<div class="card-count">{{ ctfhub_posts.size }} 篇</div>
 </div>
-</a >
 </div>
+</body>
+</html>
