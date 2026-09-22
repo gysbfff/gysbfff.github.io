@@ -33,31 +33,41 @@ body {
 
     <div style="max-width:800px;margin:30px auto;padding:0 20px;display:grid;gap:24px;">
 
-    <!-- Bugku卡片 -->
+    <!-- Bugku卡片 整个卡片可点击 -->
+    <a href=" " style="text-decoration:none;color:inherit;">
     <div style="border-radius:24px;padding:36px;background:rgba(255,255,255,0.75);backdrop-filter:blur(8px);">
     <div style="color:#2563eb;font-size:1.3rem;">BUGKU CTF</div>
-    <div style="font-size:3.6rem;margin:4px 0 12px;">
-    <a href=" " style="text-decoration:none;color:inherit;">Bugku</a >
-    </div>
+    <div style="font-size:3.6rem;margin:4px 0 12px;">Bugku</div>
     <div style="font-size:1.1rem;line-height:1.6;">Web、Misc、Crypto、Reverse、PWN等入门题目的解题记录。</div>
     <div style="margin-top:20px;font-size:1.4rem;">
-    {% assign bugku_posts = site.posts | where_exp:"item","item.categories[0] == 'Bugku'" %}
-    {{ bugku_posts.size }} 篇
+    {% assign bugku_count = 0 %}
+    {% for post in site.posts %}
+        {% if post.categories contains "Bugku" %}
+            {% assign bugku_count = bugku_count | plus:1 %}
+        {% endif %}
+    {% endfor %}
+    {{ bugku_count }} 篇
     </div>
     </div>
+    </a >
 
-    <!-- CTFHub卡片 -->
+    <!-- CTFHub卡片 整个卡片可点击 -->
+    <a href="/ctfhub.html" style="text-decoration:none;color:inherit;">
     <div style="border-radius:24px;padding:36px;background:rgba(255,255,255,0.75);">
     <div style="color:#2563eb;font-size:1.3rem;">CTFHUB</div>
-    <div style="font-size:3.6rem;margin:4px 0 12px;">
-    <a href="/ctfhub.html" style="text-decoration:none;color:inherit;">CTFHub</a >
-    </div>
+    <div style="font-size:3.6rem;margin:4px 0 12px;">CTFHub</div>
     <div style="font-size:1.1rem;line-height:1.6;">CTFHub 技能树与综合题目的解题记录。</div>
     <div style="margin-top:20px;font-size:1.4rem;">
-    {% assign ctfhub_posts = site.posts | where_exp:"item","item.categories[0] == 'CTFHub'" %}
-    {{ ctfhub_posts.size }} 篇
+    {% assign ctfhub_count = 0 %}
+    {% for post in site.posts %}
+        {% if post.categories contains "CTFHub" %}
+            {% assign ctfhub_count = ctfhub_count | plus:1 %}
+        {% endif %}
+    {% endfor %}
+    {{ ctfhub_count }} 篇
     </div>
     </div>
+    </a >
 
     </div>
 </div>
