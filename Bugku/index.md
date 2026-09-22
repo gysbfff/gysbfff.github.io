@@ -3,6 +3,7 @@ layout: list
 title: Bugku Writeups
 ---
 # Bugku
+[← 返回首页](/)
 Web、Misc、Crypto、Reverse、PWN等入门题目的解题记录。
 
 {% assign bugku = site.posts | where_exp:"item","item.categories[0] == 'Bugku'" %}
