@@ -48,7 +48,7 @@ body {
             {% assign bugku_count = bugku_count | plus:1 %}
         {% endif %}
     {% endfor %}
-    {{ bugku_count }} 篇
+    {{ site.tags.Bugku.size }} 篇
     </div>
     </div>
 
@@ -64,7 +64,7 @@ body {
             {% assign ctfhub_count = ctfhub_count | plus:1 %}
         {% endif %}
     {% endfor %}
-    {{ ctfhub_count }} 篇
+{{ site.tags.CTFHub.size }} 篇
     </div>
     </div>
 
