@@ -1,10 +1,28 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <title>Bugku Writeups</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: url("lazy.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.bg-mask {
+    background-color: rgba(255,255,255,0.72);
+    min-height: 100vh;
+    padding:30px 10px;
+}
+</style>
 </head>
 <body>
+<div class="bg-mask">
     <div style="text-align:center;margin:30px 0;">
         <h1>Bugku 题解</h1>
         <a href=" ">← 返回博客首页</a >
@@ -13,9 +31,14 @@
     <h2>文章列表</h2>
     <ul>
         {% assign posts = site.posts | where_exp:"p","p.categories[0] == 'Bugku'" %}
-        {% for post in posts %}
-            <li><a href="{{ post.url }}">{{ post.title }}</a ></li>
-        {% endfor %}
+        {% if posts.size > 0 %}
+            {% for post in posts %}
+                <li><a href="{{ post.url }}">{{ post.title }}</a ></li>
+            {% endfor %}
+        {% else %}
+            <li>暂时没有Bugku分类的文章，请检查文章categories！</li>
+        {% endif %}
     </ul>
+</div>
 </body>
 </html>
