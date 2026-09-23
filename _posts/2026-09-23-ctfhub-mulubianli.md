@@ -34,9 +34,9 @@ Apache有一个配置选项： Indexes 。开启之后，当访问的文件夹
    2. 打开XAMPP Control Panel，在Apache那一行，点 Config 按钮，在弹出菜单，选择  Apache (httpd.conf) ，直接打开配置文件。
    3. 找到  httpd.conf XAMPP： xampp\apache\conf\httpd.conf 
    4. 找到  <Directory>  标签，修改Options
-      # 修改前（危险）
+      #### 修改前（危险）
       Options Indexes FollowSymLinks
-      # 修改后（安全）
+      #### 修改后（安全）
       Options FollowSymLinks
    5. 保存文件，重启Apache服务。
 - 放置index默认首页；
