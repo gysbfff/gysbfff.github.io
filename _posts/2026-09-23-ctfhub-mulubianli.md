@@ -32,8 +32,8 @@ Apache有一个配置选项： Indexes 。开启之后，当访问的文件夹
   -拓展
    1. 点击左下角Windows开始菜单，在应用列表找到文件夹 XAMPP，点击里面的 XAMPP Control Pa。
    2. 打开XAMPP Control Panel，在Apache那一行，点 Config 按钮，在弹出菜单，选择  Apache (httpd.conf) ，直接打开配置文件。
-   3. 找到  httpd.conf XAMPP： xampp\apache\conf\httpd.conf 
-   4. 找到  <Directory>  标签，修改Options
+   3. 找到 httpd.conf XAMPP： xampp\apache\conf\httpd.conf 
+   4. 找到<Directory>标签,修改Options
       #### 修改前（危险）
       Options Indexes FollowSymLinks
       #### 修改后（安全）
