@@ -30,7 +30,7 @@ Apache有一个配置选项： Indexes 。开启之后，当访问的文件夹
 3. 安全修复：
 - 修改Apache配置，删掉indexes(本题不需要）
   -拓展
-   1. 点击左下角Windows开始菜单，在应用列表找到文件夹 XAMPP，点击里面的 XAMPP Control Pa。
+   1. 点击左下角Windows开始菜单，在应用列表找到文件夹 XAMPP，点击里面的 XAMPP Control Pa。
    2. 打开XAMPP Control Panel，在Apache那一行，点 Config 按钮，在弹出菜单，选择  Apache (httpd.conf) ，直接打开配置文件。
    3. 找到  httpd.conf XAMPP： xampp\apache\conf\httpd.conf 
    4. 找到  <Directory>  标签，修改Options
@@ -38,6 +38,6 @@ Apache有一个配置选项： Indexes 。开启之后，当访问的文件夹
       Options Indexes FollowSymLinks
       #### 修改后（安全）
       Options FollowSymLinks
-   5. 保存文件，重启Apache服务。
+  5. 保存文件，重启Apache服务。
 - 放置index默认首页；
 - 敏感文件不要放在web可访问目录。
