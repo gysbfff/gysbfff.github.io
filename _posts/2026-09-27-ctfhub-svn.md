@@ -1,11 +1,11 @@
 ---
-title: CTFHub SVN
+title: CTFHub SVN泄露
 date: 2026-09-27
 categories: CTFHub Web
 tags: CTFHub Web 信息泄露 SVN泄露
 ---
 
-# 题目: CTFHub SVN
+# 题目: CTFHub SVN泄露
 
 ## 题目描述
 点开靶场地址后页面显示Flag在服务器的旧版本中。开发人员使用SVN版本控制系统，部署网站时没有删除.svn版本控制文件夹，造成源码泄露，flag存放在SVN旧版本文件夹中。
@@ -26,8 +26,8 @@ tags: CTFHub Web 信息泄露 SVN泄露
 ## 踩坑指南
 1. nodes表checksum为NULL → 文件已经web端删除，直接访问txt文件404。
 2. pristine表里面的 $sha1$ 只是算法标记，拼接URL必须删除这个前缀。
-3. 哈希取前两位作为中间一层文件夹，SVN的pristine目录就是按哈希前两位分文件夹存储备份。
-4. 后缀固定加上  .svn‑base 。
+3. 哈希取前两位作为中间一层文件夹，SVN的pristine目录就是按哈希前两位分文件夹存储备份。
+4. 后缀固定加上  .svn‑base 。
 
 ##  知识点总结
 1. SVN旧版本文件访问格式
