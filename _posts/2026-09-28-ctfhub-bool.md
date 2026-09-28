@@ -4,7 +4,7 @@ date: 2026-09-28
 categories: CTFHub Web
 tags: CTFHub Web SQL注入 布尔盲注
 ---
-# 题目：CTFHub 布尔注入
+# 题目：CTFHub 布尔盲注
 
 ## 题目描述
 CTFHub SQL布尔注入，页面无数据回显，仅返回两种状态： query_success (条件为真)、 query_error (条件为假)，利用页面布尔状态差异逐字符猜解数据。
