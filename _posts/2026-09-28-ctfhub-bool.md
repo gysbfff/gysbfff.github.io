@@ -1,8 +1,8 @@
 ---
-title: CTFHub 布尔注入
+title: CTFHub 布尔盲注
 date: 2026-09-28
 categories: CTFHub Web
-tags: CTFHub Web SQL注入 布尔注入
+tags: CTFHub Web SQL注入 布尔盲注
 ---
 # 题目：CTFHub 布尔注入
 
