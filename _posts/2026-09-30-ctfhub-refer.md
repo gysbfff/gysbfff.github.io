@@ -1,6 +1,6 @@
 ---
 title: CTFHub Refer注入
-date:2026-09-30
+date: 2026-09-30
 categories: CTFHub Web 
 tags: CTFHub Web SQL注入 refer注入
 ---
