@@ -1,0 +1,35 @@
+---
+layout: default
+title: 微方法论
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>微方法论</title>
+<style>
+.back-btn{
+  display:inline-block;
+  padding:8px 16px;
+  background:#2563eb;
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+  margin-bottom:20px;
+}
+</style>
+</head>
+<body>
+<a href="/index.html" class="back-btn">← 返回首页</a >
+<h1>微方法论</h1>
+<p>CTF刷题方法论、Payload速查表、漏洞通用思路笔记</p >
+
+<ul>
+{% for post in site.posts %}
+{% if post.categories contains "微方法论" %}
+<li><a href="{{ post.url }}">{{ post.title }}</a ></li>
+{% endif %}
+{% endfor %}
+</ul>
+</body>
+</html>
