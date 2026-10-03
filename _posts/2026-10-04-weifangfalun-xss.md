@@ -2,7 +2,7 @@
 title: XSS Payload速查表
 date: 2026-10-04
 categories: weifangfalun
-tags: weifangfalun
+tags: [weifangfalun]
 ---
 
 # XSS Payload 速查表（CTFHub刷题专用）
