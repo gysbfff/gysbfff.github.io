@@ -33,12 +33,6 @@ body::before {
   margin-bottom: 30px;
 }
 
-.header-title hr {
-  width: 560px;
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  margin: 14px auto;
-}
-
 .header-title h1 {
   font-size: 3.4rem;
   margin: 10px 0;
@@ -94,17 +88,14 @@ body::before {
 .card .count {
   margin-top: 18px;
   font-size: 1.25rem;
+  color: #a0c4ff;
+  font-weight: bold;
 }
 
 @media (max-width: 700px) {
-  .header-title hr {
-    width: 90%;
-  }
-
   .card {
     width: 90%;
   }
-
   .header-title h1 {
     font-size: 2.4rem;
   }
@@ -113,9 +104,7 @@ body::before {
 </head>
 <body>
 <div class="header-title">
-  <hr>
   <h1>CTF Writeups</h1>
-  <hr>
   <div class="sub-desc">按平台整理刷题记录 & 学习方法论</div>
 </div>
 
