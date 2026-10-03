@@ -1,10 +1,10 @@
 ---
-title: CTFHub XXS 反射型
+title: CTFHub XSS 反射型
 date: 2026-10-03
 categories: CTFHub Web
-tags: CTFHub Web XXS 反射型
+tags: CTFHub Web XSS 反射型
 ---
-# 题目：CTFHub XXS 反射型
+# 题目：CTFHub XSS 反射型
 
 ## 题目描述
 页面存在可控输入框，输入内容会直接展示在页面中，后端无任何过滤。平台提供  Send URL to Bot  功能，可让后台管理员Bot访问指定链接，Flag存储在Bot的Cookie中，需要通过XSS窃取Bot Cookie获取Flag。
