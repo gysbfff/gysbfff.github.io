@@ -1,35 +1,94 @@
 ---
-layout: default
-title: 微方法论
+layout: null
 ---
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<title>微方法论</title>
+    <meta charset="UTF-8">
+    <title>weifangfalun Writeups</title>
 <style>
-.back-btn{
-  display:inline-block;
-  padding:8px 16px;
-  background:#2563eb;
-  color:#fff;
-  text-decoration:none;
-  border-radius:6px;
-  margin-bottom:20px;
+body {
+    margin: 0;
+    padding: 0;
+    background: url("lazy.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.bg-mask {
+    background-color: rgba(0, 0, 0, 0.55);
+    min-height: 100vh;
+    padding: 30px 16px;
+    color: #fff;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.back-link {
+    font-size: 20px;
+    color: #88aaff;
+    text-decoration: none;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 0 0 8px;
+}
+
+.count-text {
+    color: #b8c2d0;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.item-card {
+    background: rgba(40, 40, 45, 0.75);
+    border-radius: 18px;
+    padding: 24px;
+    margin-bottom: 16px;
+}
+
+.item-card a {
+    font-size: 24px;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.item-date {
+    color: #b8c2d0;
+    font-size: 16px;
 }
 </style>
 </head>
 <body>
-<a href="/index.html" class="back-btn">← 返回总入口</a >
-<h1>微方法论</h1>
-<p>CTF刷题方法论、Payload速查表、漏洞通用思路笔记</p >
+<div class="bg-mask">
+    <div class="container">
+        <a href="./index.html" class="back-link">← 返回总入口</a >
 
-<ul>
-{% for post in site.posts %}
-{% if post.categories contains "微方法论" %}
-<li><a href="{{ post.url }}">{{ post.title }}</a ></li>
-{% endif %}
-{% endfor %}
-</ul>
+        <h1>CTFHub</h1>
+        <div class="count-text">共 {{ site.tags.weifangfalun.size }} 篇解题记录</div>
+
+        {% assign has_post = false %}
+        {% for post in site.tags.weifangfalun %}
+            <div class="item-card">
+                <a href="{{ post.url }}">{{ post.title }}</a >
+                <div class="item-date">{{ post.date | date: "%Y-%m-%d" }}</div>
+            </div>
+            {% assign has_post = true %}
+        {% endfor %}
+
+        {% if has_post == false %}
+            <div class="item-card">暂无文章</div>
+        {% endif %}
+    </div>
+</div>
 </body>
 </html>
