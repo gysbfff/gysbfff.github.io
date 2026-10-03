@@ -73,17 +73,17 @@ body {
 </body>
 </html>
 
-<!-- 微方法论卡片 onclick跳转 -->
-<div class="card" onclick="location.href='/weifangfalun.html'">
-<div style="color:#2563eb;font-size:1.3rem;">微方法论</div>
-<div style="font-size:3.6rem;margin:4px 0 12px;"></div>
-<div style="font-size:1.1rem;line-height:1.6;">CTF刷题方法论、Payload速查表、漏洞通用思路笔记。</div>
-<div style="margin-top:20px;font-size:1.4rem;">
-{% assign wf_count = 0 %}
-{% for post in site.posts %}
-  {% if post.categories contains "微方法论" %}
-    {% assign wf_count = wf_count | plus:1 %}
-  {% endif %}
+    <!-- 微方法论卡片 onclick跳转 -->
+    <div class="card" onclick="location.href='/weifangfalun.html'">
+    <div style="color:#2563eb;font-size:1.3rem;">微方法论</div>
+    <div style="font-size:3.6rem;margin:4px 0 12px;"></div>
+    <div style="font-size:1.1rem;line-height:1.6;">CTF刷题方法论、Payload速查表、漏洞通用思路笔记。</div>
+    <div style="margin-top:20px;font-size:1.4rem;">
+    {% assign wf_count = 0 %}
+    {% for post in site.posts %}
+          {% if post.categories contains "微方法论" %}
+             {% assign wf_count = wf_count | plus:1 %}
+          {% endif %}
 {% endfor %}
 {{ wf_count }} 篇
 </div>
