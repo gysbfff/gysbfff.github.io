@@ -10,9 +10,8 @@ layout: null
 body {
     margin: 0;
     padding: 0;
-    background: url("lazy.jpg") no-repeat center center;
+    background: url("lazy.jpg") no-repeat center center fixed;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 .bg-mask {
@@ -48,7 +47,7 @@ h1 {
 }
 
 .item-card {
-    background: rgba(40, 40, 45, 0.75);
+    background: rgba(40, 40, 40, 0.75);
     border-radius: 18px;
     padding: 24px;
     margin-bottom: 16px;
@@ -64,7 +63,6 @@ h1 {
 
 .item-date {
     color: #b8c2d0;
-    font-size: 16px;
 }
 </style>
 </head>
@@ -74,11 +72,10 @@ h1 {
         <a href="./index.html" class="back-link">← 返回总入口</a >
 
         <h1>微方法论</h1>
-        {% assign list = site.posts | where_exp:"p", "p.tags contains 'weifangfalun'" %}
-        <div class="count-text">共 {{ list.size }} 篇笔记</div>
+        <div class="count-text">共 {{ site.tags.micro.size }} 篇笔记</div>
 
-        {% if list.size > 0 %}
-            {% for post in list %}
+        {% if site.tags.micro.size > 0 %}
+            {% for post in site.tags.micro %}
                 <div class="item-card">
                     <a href="{{ post.url }}">{{ post.title }}</a >
                     <div class="item-date">{{ post.date | date:"%Y-%m-%d" }}</div>
