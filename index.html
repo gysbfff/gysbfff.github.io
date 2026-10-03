@@ -9,63 +9,122 @@ title: 首页
 body {
   margin: 0;
   padding: 40px 20px;
-  background-image: url("lazy.jpg");
+  background-image: url("lazy2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   font-family: system-ui, sans-serif;
+  position: relative;
 }
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* 顶部标题区域 */
+.header-title{
+  text-align:center;
+  color:#fff;
+  margin-bottom:40px;
+}
+.header-title .top-name{
+  color:#73a8ff;
+  font-size:2.2rem;
+  text-align:left;
+  width:620px;
+  margin:0 auto 10px auto;
+}
+.header-title hr{
+  width:620px;
+  border:1px solid rgba(255,255,255,0.6);
+  margin:0 auto;
+}
+.header-title h1{
+  font-size:4rem;
+  margin:20px 0;
+  font-weight:bold;
+}
+.header-title .sub-desc{
+  font-size:1.4rem;
+  opacity:0.9;
+}
+
 .cards-container {
   display: flex;
   flex-direction: column;
   gap: 30px;
   align-items: center;
 }
-/* 磨砂深色半透卡片，和截图一模一样 */
+
 .card {
   width: 620px;
   padding: 36px;
   border-radius: 22px;
-  background: rgba(0,0,0,0.35);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: #ffffff;
   cursor: pointer;
   transition: 0.25s ease;
-  color: #ffffff;
 }
+
 .card:hover {
   transform: translateY(-4px);
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.55);
 }
-.card .tag-title{
-  color:#a0c4ff;
-  font-size:1.3rem;
+
+.card .tag-title {
+  color: #a0c4ff;
+  font-size: 1.3rem;
 }
-.card .main-title{
-  font-size:3.2rem;
-  margin:6px 0 12px 0;
+
+.card .main-title {
+  font-size: 3.2rem;
+  margin: 6px 0 12px 0;
 }
-.card .desc{
-  font-size:1.1rem;
-  line-height:1.6;
-  opacity:0.92;
+
+.card .desc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.92;
 }
-.card .count{
-  margin-top:22px;
-  font-size:1.4rem;
+
+.card .count {
+  margin-top: 22px;
+  font-size: 1.4rem;
 }
-@media (max-width:700px){
-  .card{
+
+@media (max-width: 700px) {
+  .header-title .top-name, .header-title hr{
+    width:90%;
+  }
+  .card {
     width: 90%;
+  }
+  .header-title h1{
+    font-size:3rem;
   }
 }
 </style>
 </head>
 <body>
+<div class="header-title">
+  <div class="top-name">gysbfff 的技术博客</div>
+  <hr>
+  <h1>CTF Writeups</h1>
+  <hr>
+  <div class="sub-desc">按平台整理刷题记录</div>
+</div>
+
 <div class="cards-container">
 
-  <!-- Bugku 卡片（tag统计） -->
+  <!-- Bugku 卡片 -->
   <div class="card" onclick="location.href='/bugku.html'">
     <div class="tag-title">BUGKU CTF</div>
     <div class="main-title">Bugku</div>
@@ -81,7 +140,7 @@ body {
     </div>
   </div>
 
-  <!-- CTFHub 卡片（tag统计） -->
+  <!-- CTFHub 卡片 -->
   <div class="card" onclick="location.href='/ctfhub.html'">
     <div class="tag-title">CTFHUB</div>
     <div class="main-title">CTFHub</div>
@@ -97,7 +156,7 @@ body {
     </div>
   </div>
 
-  <!-- 微方法论 卡片（tag统计） -->
+  <!-- 微方法论 卡片 -->
   <div class="card" onclick="location.href='/weifangfalun.html'">
     <div class="tag-title">NOTE</div>
     <div class="main-title">微方法论</div>
