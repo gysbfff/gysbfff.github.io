@@ -33,14 +33,6 @@ body::before {
   margin-bottom: 30px;
 }
 
-.header-title .top-name {
-  color: #73a8ff;
-  font-size: 1.6rem;
-  width: 620px;
-  margin: 0 auto 12px auto;
-  text-align: left;
-}
-
 .header-title hr {
   width: 560px;
   border: 1px solid rgba(255, 255, 255, 0.55);
@@ -105,7 +97,6 @@ body::before {
 }
 
 @media (max-width: 700px) {
-  .header-title .top-name,
   .header-title hr {
     width: 90%;
   }
@@ -122,40 +113,35 @@ body::before {
 </head>
 <body>
 <div class="header-title">
-  <div class="top-name">gysbfff 的技术博客</div>
   <hr>
   <h1>CTF Writeups</h1>
   <hr>
-  <div class="sub-desc">按平台整理刷题记录</div>
+  <div class="sub-desc">按平台整理刷题记录 & 学习方法论</div>
 </div>
 
 <div class="cards-container">
-{% assign bugku_count = 0 %}
-{% for post in site.posts %}
-  {% if post.tags contains "bugku" %}
-    {% assign bugku_count = bugku_count | plus:1 %}
-  {% endif %}
-{% endfor %}
   <!-- Bugku卡片 -->
   <div class="card" onclick="location.href='/bugku.html'">
     <div class="tag-title">BUGKU CTF</div>
     <div class="main-title">Bugku</div>
     <div class="desc">Web、Misc、Crypto、Reverse、PWN 入门题目</div>
-    <div class="count">{{ bugku_count }} 篇</div>
+    <div class="count">{{ site.tags.bugku.size }} 篇</div>
   </div>
 
-{% assign ctfhub_count = 0 %}
-{% for post in site.posts %}
-  {% if post.tags contains "ctfhub" %}
-    {% assign ctfhub_count = ctfhub_count | plus:1 %}
-  {% endif %}
-{% endfor %}
   <!-- CTFHub卡片 -->
   <div class="card" onclick="location.href='/ctfhub.html'">
     <div class="tag-title">CTFHUB</div>
     <div class="main-title">CTFHub</div>
     <div class="desc">CTFHub 技能树与综合靶场题解</div>
-    <div class="count">{{ ctfhub_count }} 篇</div>
+    <div class="count">{{ site.tags.ctfhub.size }} 篇</div>
+  </div>
+
+  <!-- 微方法论卡片，跳转 weifangfalun.html -->
+  <div class="card" onclick="location.href='/weifangfalun.html'">
+    <div class="tag-title">学习框架</div>
+    <div class="main-title">微方法论</div>
+    <div class="desc">信息安全学习思路、解题思考框架、复盘方法论</div>
+    <div class="count">{{ site.tags.micro-method.size }} 篇</div>
   </div>
 
 </div>
