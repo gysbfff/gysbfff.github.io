@@ -5,7 +5,7 @@ layout: null
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>weifangfalun Writeups</title>
+    <title>微方法论笔记</title>
 <style>
 body {
     margin: 0;
@@ -71,10 +71,10 @@ h1 {
 <body>
 <div class="bg-mask">
     <div class="container">
-        <a href="./index.html" class="back-link">← 返回总入口</a >
+        <a href=" " class="back-link">← 返回总入口</a >
 
-        <h1>CTFHub</h1>
-        <div class="count-text">共 {{ site.tags.weifangfalun.size }} 篇解题记录</div>
+        <h1>微方法论</h1>
+        <div class="count-text">共 {{ site.tags.weifangfalun.size }} 篇笔记</div>
 
         {% assign has_post = false %}
         {% for post in site.tags.weifangfalun %}
@@ -86,7 +86,7 @@ h1 {
         {% endfor %}
 
         {% if has_post == false %}
-            <div class="item-card">暂无文章</div>
+            <div class="item-card">暂无笔记</div>
         {% endif %}
     </div>
 </div>
