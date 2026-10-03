@@ -2,7 +2,7 @@
 title: CTFHub XSS 过滤空格
 date: 2026-10-03
 categories: CTFHub Web
-tags: CTFHub Web XXS OOB
+tags: CTFHub Web XSS OOB
 ---
 # 题目: CTFHub XSS 过滤空格
 
