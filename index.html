@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 首页
+title: CTF刷题首页 | gysbfff 的技术博客
 ---
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -27,46 +27,50 @@ body::before {
   pointer-events: none;
 }
 
-/* 顶部标题区域 */
-.header-title{
-  text-align:center;
-  color:#fff;
-  margin-bottom:40px;
+.header-title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
 }
-.header-title .top-name{
-  color:#73a8ff;
-  font-size:2.2rem;
-  width:620px;
-  margin:0 auto 10px auto;
-  text-align:left;
+
+.header-title .top-name {
+  color: #73a8ff;
+  font-size: 1.6rem;
+  width: 620px;
+  margin: 0 auto 12px auto;
+  text-align: left;
 }
-.header-title hr{
-  width:620px;
-  border:1px solid rgba(255,255,255,0.6);
-  margin:0 auto;
+
+.header-title hr {
+  width: 560px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  margin: 14px auto;
 }
-.header-title h1{
-  font-size:4rem;
-  margin:20px 0;
-  font-weight:bold;
+
+.header-title h1 {
+  font-size: 3.4rem;
+  margin: 10px 0;
+  font-weight: bold;
 }
-.header-title .sub-desc{
-  font-size:1.4rem;
-  opacity:0.9;
+
+.header-title .sub-desc {
+  font-size: 1.15rem;
+  opacity: 0.9;
+  margin-top: 4px;
 }
 
 .cards-container {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 24px;
   align-items: center;
 }
 
 .card {
-  width: 620px;
-  padding: 36px;
-  border-radius: 22px;
-  background: rgba(0, 0, 0, 0.45);
+  width: 560px;
+  padding: 30px;
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   color: #ffffff;
@@ -76,39 +80,42 @@ body::before {
 
 .card:hover {
   transform: translateY(-4px);
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .card .tag-title {
   color: #a0c4ff;
-  font-size: 1.3rem;
+  font-size: 1.15rem;
 }
 
 .card .main-title {
-  font-size: 3.2rem;
-  margin: 6px 0 12px 0;
+  font-size: 2.6rem;
+  margin: 4px 0 10px 0;
 }
 
 .card .desc {
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.55;
   opacity: 0.92;
 }
 
 .card .count {
-  margin-top: 22px;
-  font-size: 1.4rem;
+  margin-top: 18px;
+  font-size: 1.25rem;
 }
 
 @media (max-width: 700px) {
-  .header-title .top-name, .header-title hr{
-    width:90%;
+  .header-title .top-name,
+  .header-title hr {
+    width: 90%;
   }
+
   .card {
     width: 90%;
   }
-  .header-title h1{
-    font-size:3rem;
+
+  .header-title h1 {
+    font-size: 2.4rem;
   }
 }
 </style>
@@ -123,53 +130,20 @@ body::before {
 </div>
 
 <div class="cards-container">
-
-  <!-- Bugku 卡片 -->
+  <!-- Bugku卡片 -->
   <div class="card" onclick="location.href='/bugku.html'">
     <div class="tag-title">BUGKU CTF</div>
     <div class="main-title">Bugku</div>
     <div class="desc">Web、Misc、Crypto、Reverse、PWN 入门题目</div>
-    <div class="count">
-      {% assign bugku_count = 0 %}
-      {% for post in site.posts %}
-        {% if post.tags contains "Bugku" %}
-          {% assign bugku_count = bugku_count | plus:1 %}
-        {% endif %}
-      {% endfor %}
-      {{ bugku_count }} 篇
-    </div>
+    <div class="count">30 篇</div>
   </div>
 
-  <!-- CTFHub 卡片 -->
+  <!-- CTFHub卡片 -->
   <div class="card" onclick="location.href='/ctfhub.html'">
     <div class="tag-title">CTFHUB</div>
     <div class="main-title">CTFHub</div>
     <div class="desc">CTFHub 技能树与综合靶场题解</div>
-    <div class="count">
-      {% assign ctfhub_count = 0 %}
-      {% for post in site.posts %}
-        {% if post.tags contains "CTFHub" %}
-          {% assign ctfhub_count = ctfhub_count | plus:1 %}
-        {% endif %}
-      {% endfor %}
-      {{ ctfhub_count }} 篇
-    </div>
-  </div>
-
-  <!-- 微方法论 卡片 -->
-  <div class="card" onclick="location.href='/weifangfalun.html'">
-    <div class="tag-title">NOTE</div>
-    <div class="main-title">微方法论</div>
-    <div class="desc">CTF刷题方法论、Payload速查表、漏洞通用思路笔记</div>
-    <div class="count">
-      {% assign wf_count = 0 %}
-      {% for post in site.posts %}
-        {% if post.tags contains "微方法论" %}
-          {% assign wf_count = wf_count | plus:1 %}
-        {% endif %}
-      {% endfor %}
-      {{ wf_count }} 篇
-    </div>
+    <div class="count">0 篇</div>
   </div>
 
 </div>
