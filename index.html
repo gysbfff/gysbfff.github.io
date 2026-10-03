@@ -1,90 +1,74 @@
----
-layout: null
----
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>CTF Writeups</title>
 <style>
-body {
-    margin: 0;
-    padding: 0;
-    background: url("lazy.jpg") no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  align-items: stretch;
 }
-.bg-mask {
-    background-color: rgba(255,255,255,0.72);
-    min-height: 100vh;
-    padding:30px 10px;
+.card {
+  width: 320px;
+  padding: 30px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: 0.2s ease;
 }
-.card{
-    border-radius:24px;
-    padding:36px;
-    background:rgba(255,255,255,0.75);
-    cursor:pointer;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 </style>
-</head>
-<body>
-<div class="bg-mask">
-    <div style="text-align:center;">
-    <h1>gysbfff的博客</h1>
-    <p>平台分类整理题目与解题记录</p >
-    </div>
 
-    <div style="max-width:800px;margin:30px auto;padding:0 20px;display:grid;gap:24px;">
+<div class="cards-container">
 
-    <!-- Bugku卡片 onclick跳转 -->
-    <div class="card" onclick="location.href='/bugku.html'">
-    <div style="color:#2563eb;font-size:1.3rem;">BUGKU CTF</div>
-    <div style="font-size:3.6rem;margin:4px 0 12px;">Bugku</div>
-    <div style="font-size:1.1rem;line-height:1.6;">Web、Misc、Crypto、Reverse、PWN等入门题目的解题记录。</div>
+  <!-- Bugku 卡片 -->
+  <div class="card" onclick="location.href='/bugku.html'">
+    <div style="color:#2563eb;font-size:1.3rem;">Bugku</div>
+    <div style="font-size:3.6rem;margin:4px 0 12px;"></div>
+    <div style="font-size:1.1rem;line-height:1.6;">Web、Misc、Crypto、Reverse、Pwn等入门题目的解题记录。</div>
     <div style="margin-top:20px;font-size:1.4rem;">
-    {% assign bugku_count = 0 %}
-    {% for post in site.posts %}
+      {% assign bugku_count = 0 %}
+      {% for post in site.posts %}
         {% if post.categories contains "Bugku" %}
-            {% assign bugku_count = bugku_count | plus:1 %}
+          {% assign bugku_count = bugku_count | plus:1 %}
         {% endif %}
-    {% endfor %}
-    {{ site.tags.Bugku.size }} 篇
+      {% endfor %}
+      {{ bugku_count }} 篇
     </div>
-    </div>
+  </div>
 
-    <!-- CTFHub卡片 onclick跳转 -->
-    <div class="card" onclick="location.href='/ctfhub.html'">
-    <div style="color:#2563eb;font-size:1.3rem;">CTFHUB</div>
-    <div style="font-size:3.6rem;margin:4px 0 12px;">CTFHub</div>
-    <div style="font-size:1.1rem;line-height:1.6;">CTFHub 技能树与综合题目的解题记录。</div>
+  <!-- CTFHub 卡片 -->
+  <div class="card" onclick="location.href='/ctfhub.html'">
+    <div style="color:#2563eb;font-size:1.3rem;">CTFHub</div>
+    <div style="font-size:3.6rem;margin:4px 0 12px;"></div>
+    <div style="font-size:1.1rem;line-height:1.6;">CTFHub 技能树与综合题目解题记录。</div>
     <div style="margin-top:20px;font-size:1.4rem;">
-    {% assign ctfhub_count = 0 %}
-    {% for post in site.posts %}
+      {% assign ctfhub_count = 0 %}
+      {% for post in site.posts %}
         {% if post.categories contains "CTFHub" %}
-            {% assign ctfhub_count = ctfhub_count | plus:1 %}
+          {% assign ctfhub_count = ctfhub_count | plus:1 %}
         {% endif %}
-    {% endfor %}
-{{ site.tags.CTFHub.size }} 篇
+      {% endfor %}
+      {{ ctfhub_count }} 篇
     </div>
-    </div>
+  </div>
 
-    </div>
-</div>
-</body>
-</html>
-
-    <!-- 微方法论卡片 onclick跳转 -->
-    <div class="card" onclick="location.href='/weifangfalun.html'">
+  <!-- 微方法论卡片 -->
+  <div class="card" onclick="location.href='/weifangfalun.html'">
     <div style="color:#2563eb;font-size:1.3rem;">微方法论</div>
     <div style="font-size:3.6rem;margin:4px 0 12px;"></div>
     <div style="font-size:1.1rem;line-height:1.6;">CTF刷题方法论、Payload速查表、漏洞通用思路笔记。</div>
     <div style="margin-top:20px;font-size:1.4rem;">
-    {% assign wf_count = 0 %}
-    {% for post in site.posts %}
-          {% if post.categories contains "微方法论" %}
-             {% assign wf_count = wf_count | plus:1 %}
-          {% endif %}
-{% endfor %}
-{{ wf_count }} 篇
-</div>
+      {% assign wf_count = 0 %}
+      {% for post in site.posts %}
+        {% if post.categories contains "微方法论" %}
+          {% assign wf_count = wf_count | plus:1 %}
+        {% endif %}
+      {% endfor %}
+      {{ wf_count }} 篇
+    </div>
+  </div>
+
 </div>
