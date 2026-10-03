@@ -9,37 +9,51 @@ title: 首页
 body {
   margin: 0;
   padding: 40px 20px;
-  /* 懒羊羊背景图 */
   background-image: url("lazy.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-}
-/* 全局半透明遮罩层 */
-.bg-mask{
-  background-color: rgba(255,255,255,0.72);
-  padding: 30px;
-  border-radius: 20px;
+  font-family: system-ui, sans-serif;
 }
 .cards-container {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 30px;
   align-items: center;
 }
+/* 磨砂深色半透卡片，和截图一模一样 */
 .card {
-  width: 600px;
-  padding: 30px;
-  border-radius: 16px;
-  background: #ffffff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  width: 620px;
+  padding: 36px;
+  border-radius: 22px;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   cursor: pointer;
-  transition: 0.2s ease;
+  transition: 0.25s ease;
+  color: #ffffff;
 }
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  background: rgba(0,0,0,0.45);
+}
+.card .tag-title{
+  color:#a0c4ff;
+  font-size:1.3rem;
+}
+.card .main-title{
+  font-size:3.2rem;
+  margin:6px 0 12px 0;
+}
+.card .desc{
+  font-size:1.1rem;
+  line-height:1.6;
+  opacity:0.92;
+}
+.card .count{
+  margin-top:22px;
+  font-size:1.4rem;
 }
 @media (max-width:700px){
   .card{
@@ -49,15 +63,14 @@ body {
 </style>
 </head>
 <body>
-<div class="bg-mask">
 <div class="cards-container">
 
   <!-- Bugku 卡片（tag统计） -->
   <div class="card" onclick="location.href='/bugku.html'">
-    <div style="color:#2563eb;font-size:1.3rem;">Bugku</div>
-    <div style="font-size:3.6rem;margin:4px 0 12px;"></div>
-    <div style="font-size:1.1rem;line-height:1.6;">Web、Misc、Crypto、Reverse、Pwn等入门题目的解题记录。</div>
-    <div style="margin-top:20px;font-size:1.4rem;">
+    <div class="tag-title">BUGKU CTF</div>
+    <div class="main-title">Bugku</div>
+    <div class="desc">Web、Misc、Crypto、Reverse、PWN 入门题目</div>
+    <div class="count">
       {% assign bugku_count = 0 %}
       {% for post in site.posts %}
         {% if post.tags contains "Bugku" %}
@@ -70,10 +83,10 @@ body {
 
   <!-- CTFHub 卡片（tag统计） -->
   <div class="card" onclick="location.href='/ctfhub.html'">
-    <div style="color:#2563eb;font-size:1.3rem;">CTFHub</div>
-    <div style="font-size:3.6rem;margin:4px 0 12px;"></div>
-    <div style="font-size:1.1rem;line-height:1.6;">CTFHub 技能树与综合题目解题记录。</div>
-    <div style="margin-top:20px;font-size:1.4rem;">
+    <div class="tag-title">CTFHUB</div>
+    <div class="main-title">CTFHub</div>
+    <div class="desc">CTFHub 技能树与综合靶场题解</div>
+    <div class="count">
       {% assign ctfhub_count = 0 %}
       {% for post in site.posts %}
         {% if post.tags contains "CTFHub" %}
@@ -86,10 +99,10 @@ body {
 
   <!-- 微方法论 卡片（tag统计） -->
   <div class="card" onclick="location.href='/weifangfalun.html'">
-    <div style="color:#2563eb;font-size:1.3rem;">微方法论</div>
-    <div style="font-size:3.6rem;margin:4px 0 12px;"></div>
-    <div style="font-size:1.1rem;line-height:1.6;">CTF刷题方法论、Payload速查表、漏洞通用思路笔记。</div>
-    <div style="margin-top:20px;font-size:1.4rem;">
+    <div class="tag-title">NOTE</div>
+    <div class="main-title">微方法论</div>
+    <div class="desc">CTF刷题方法论、Payload速查表、漏洞通用思路笔记</div>
+    <div class="count">
       {% assign wf_count = 0 %}
       {% for post in site.posts %}
         {% if post.tags contains "微方法论" %}
@@ -100,7 +113,6 @@ body {
     </div>
   </div>
 
-</div>
 </div>
 </body>
 </html>
