@@ -1,3 +1,10 @@
+---
+layout: default
+title: 首页
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
 <style>
 .cards-container {
   display: flex;
@@ -20,10 +27,11 @@
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 </style>
+</head>
+<body>
 
 <div class="cards-container">
-
-  <!-- Bugku 卡片 -->
+  <!-- Bugku卡片 -->
   <div class="card" onclick="location.href='/bugku.html'">
     <div style="color:#2563eb;font-size:1.3rem;">Bugku</div>
     <div style="font-size:3.6rem;margin:4px 0 12px;"></div>
@@ -39,7 +47,7 @@
     </div>
   </div>
 
-  <!-- CTFHub 卡片 -->
+  <!-- CTFHub卡片 -->
   <div class="card" onclick="location.href='/ctfhub.html'">
     <div style="color:#2563eb;font-size:1.3rem;">CTFHub</div>
     <div style="font-size:3.6rem;margin:4px 0 12px;"></div>
@@ -70,5 +78,7 @@
       {{ wf_count }} 篇
     </div>
   </div>
-
 </div>
+
+</body>
+</html>
