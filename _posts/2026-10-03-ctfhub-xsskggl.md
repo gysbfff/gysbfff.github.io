@@ -17,8 +17,7 @@ tags: CTFHub Web XSS OOB
  
 ## 解题步骤
 1. 漏洞测试
-输入带空格的测试payload：
-<script> alert(1)</script>
+输入带空格的测试payload：<script> alert(1)</script>
 后端删除空格，代码语法损坏，无法弹窗，确认存在空格过滤。
  
 2. 构造绕过空格的Payload
