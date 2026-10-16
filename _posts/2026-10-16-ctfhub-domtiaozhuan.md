@@ -124,6 +124,7 @@ http://challenge-xxx:10800/?jumpto=javascript:fetch(...)
 ## 知识点总结
 1. DOM 型 XSS
 定义： 漏洞出现在前端 JavaScript 代码中，用户输入被直接操作 DOM，没有经过服务端。
+
 | 函数 | 说明 |
 | :--- | :--- |
 | `location.href` | URL 跳转 |
