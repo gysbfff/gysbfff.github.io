@@ -124,14 +124,15 @@ http://challenge-xxx:10800/?jumpto=javascript:fetch(...)
 ## 知识点总结
 1. DOM 型 XSS
 定义： 漏洞出现在前端 JavaScript 代码中，用户输入被直接操作 DOM，没有经过服务端。
-函数	|说明
-location.href	URL| 跳转
-innerHTML	|插入HTML
-document.write	|写入文档
-eval	|执行字符串代码
-setTimeout / setInterval	|定时执行
+| 函数 | 说明 |
+| :--- | :--- |
+| `location.href` | URL 跳转 |
+| `innerHTML` | 插入 HTML |
+| `document.write` | 写入文档 |
+| `eval` | 执行字符串代码 |
+| `setTimeout / setInterval` | 定时执行 |
 
-2. JavaScript 伪协议
+3. JavaScript 伪协议
 定义： javascript: 是 URL 的一种协议，用于在浏览器中执行 JavaScript 代码。
 使用场景：
 <a href="javascript:alert(1)">click</a>
@@ -141,12 +142,13 @@ setTimeout / setInterval	|定时执行
 在 iframe、表单等场景下也可能被拦截。
 绕过技巧：
 
-技巧|示例|说明
-换行符|java%0ascript:|插入换行符绕过字符串匹配
-Tab	|java%09script:|插入 Tab 字符
-回车|java%0dscript:|插入回车符
-HTML 实体|javascript&colon;|编码冒号
-大小写|JavaScript:|有些过滤器只匹配小写
+| 技巧 | 示例 | 说明 |
+| :--- | :--- | :--- |
+| 换行符 | `java%0ascript:` | 插入换行符绕过字符串匹配 |
+| Tab | `java%09script:` | 插入 Tab 字符 |
+| 回车 | `java%0dscript:` | 插入回车符 |
+| HTML 实体 | `javascript&colon;` | 编码冒号 |
+| 大小写 | `JavaScript:` | 有些过滤器只匹配小写 |
 
 3. 无引号外带技巧
 为什么需要？ URL 里的引号会被浏览器转码成 %27，破坏 JS 语法。
@@ -173,12 +175,13 @@ XXE 外带文件内容
 定义： 浏览器发送 Referer 头的策略。
 常见值：
 
-值|说明
-no-referrer|不发送 Referer
-same-origin|同源才发送
-strict-origin|只发送域名
-strict-origin-when-cross-origin|跨域只发域名（默认）
-unsafe-url|发送完整 URL
+| 值 | 说明 |
+| :--- | :--- |
+| `no-referrer` | 不发送 Referer |
+| `same-origin` | 同源才发送 |
+| `strict-origin` | 只发送域名 |
+| `strict-origin-when-cross-origin` | 跨域只发域名（默认） |
+| `unsafe-url` | 发送完整 URL |
 本题体现： 跨域跳转时，Referer 只有域名，没有完整路径。所以不能依赖 Referer 泄露 Cookie。
 
 6. 防御建议
