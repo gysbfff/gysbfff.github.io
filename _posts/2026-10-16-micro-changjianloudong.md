@@ -1,12 +1,16 @@
 ---
 title: 新手常见漏洞
-time: 2026-10-16
+date: 2026-10-16
 categories: micro
 tags: micro
 ---
-# 题目：新手常见漏洞
+<h1>新手常见漏洞</h1>
+<p>发布日期：2026-10-16</p>
+<hr>
 
-<table>
+<h2>题目：新手常见漏洞</h2>
+
+<table border="1" cellpadding="8" cellspacing="0">
   <thead>
     <tr>
       <th>漏洞名</th>
