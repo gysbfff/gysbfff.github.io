@@ -2,7 +2,7 @@
 title: CTFHub XSS DOM反射 
 date: 2026-10-09
 categories: CTFHub Web
-tags： CTFHub Web XSS DOM
+tags：CTFHub Web XSS DOM
 ---
 
 # 题目:  CTFHub XSS DOM反射 
