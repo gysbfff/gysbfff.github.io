@@ -1,11 +1,11 @@
 ---
-title: CTFhub 文件上传-MIME绕过
+title: CTFHub 文件上传-MIME绕过
 date: 2026-10-21
-categories: CTFhub Web 文件上传
-tags:  CTFhub Web 文件上传 MIME 类型伪造 Content-Type 绕过
+categories: CTFHub Web 文件上传
+tags:  CTFHub Web 文件上传 MIME 类型伪造 Content-Type 绕过
 ---
 
-# 题目：CTFhub 文件上传-MIME绕过
+# 题目：CTFHub 文件上传-MIME绕过
 
 ## 题目描述
 打开题目页面，尝试直接上传 `shell.php`，可能会被拦截。
