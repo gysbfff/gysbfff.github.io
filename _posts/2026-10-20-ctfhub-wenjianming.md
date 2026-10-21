@@ -1,11 +1,11 @@
 ---
-title: CTFHub 文件上传 文件头检测
+title: CTFHub 文件上传 文件头检查
 date: 2026-10-20
 categories: CTFHub Web 文件上传
 tags: CTFHub Web 文件上传
 ---
 
-# 题目：CTFHub 文件上传 文件头检测
+# 题目：CTFHub 文件上传 文件头检查
 
 ## 题目描述
 打开题目页面，界面与之前的题类似。尝试直接上传 `shell.php`，页面提示：
