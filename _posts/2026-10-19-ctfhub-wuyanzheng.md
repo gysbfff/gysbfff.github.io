@@ -1,10 +1,10 @@
 ---
-title: CTFHub XSS 无验证
+title: CTFHub 文件上传 无验证
 date: 2026-10-19
-categories: CTFHub XSS
-tags: CTFHub XSS
+categories: CTFHub 
+tags: CTFHub 文件上传 Web
 ---
-# 题目:  CTFHub XSS 无验证
+# 题目:  CTFHub 文件上传 无验证
 
 ## 题目描述
 打开题目页面，界面非常简洁：
