@@ -1,11 +1,11 @@
 ---
-title: CTFHub 命令注入 - 过滤运算符 Writeup
+title: CTFHub 命令注入 - 过滤运算符 
 date: 2026-10-23
-categories: CTFHub Web 命令注入 绕过运算符 无回显盲注 `od` 十六进制转换
-tags: CTFHub Web 命令注入 绕过运算符 无回显盲注 `od` 十六进制转换
+categories: CTFHub Web 命令注入 
+tags: CTFHub Web 命令注入 
 ---
 
-# 题目： CTFHub 命令注入 - 过滤运算符 Writeup
+# 题目： CTFHub 命令注入 - 过滤运算符
 
 ## 题目描述
 打开题目页面，源码如下：
