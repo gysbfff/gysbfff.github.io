@@ -1,8 +1,8 @@
 ---
 title: CTFHub 命令注入 - 无过滤
 date: 2026-10-23
-categories: 命令注入 Linux 命令拼接 Base64 编码绕过回显限制
-tags: 命令注入 Linux 命令拼接 Base64 编码绕过回显限制
+categories: CTFHub Web
+tags: CTFHub Web
 ---
 
 # 题目： CTFHub 命令注入 - 无过滤
