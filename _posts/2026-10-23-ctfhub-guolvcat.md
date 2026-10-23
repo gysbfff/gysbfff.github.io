@@ -1,8 +1,8 @@
 ---
 title: CTFHub 命令注入 - 过滤cat
 date: 2026-10-23
-categories: CTFHub Web 命令注入 黑名单绕过 Base64 编码
-tags: CTFHub Web 命令注入 黑名单绕过 Base64 编码
+categories: CTFHub Web 命令注入 
+tags: CTFHub Web 命令注入 
 ----
 
 # 题目：CTFHub 命令注入 - 过滤cat
