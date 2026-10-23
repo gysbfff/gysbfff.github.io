@@ -1,8 +1,8 @@
 ---
 title: CTFHub 命令注入-过滤空格
 date: 2026-10-23
-categories: CTFHub Web 命令注入 空格过滤绕过 `${IFS}` 替换
-tags: CTFHub Web 命令注入 空格过滤绕过 `${IFS}` 替换
+categories: CTFHub Web 命令注入 空格过滤绕过 
+tags: CTFHub Web 命令注入 空格过滤绕过 
 ---
 
 # 题目: CTFHub 命令注入-过滤空格
