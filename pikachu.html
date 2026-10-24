@@ -5,7 +5,7 @@ layout: null
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>Pikachu靶场 Writeups</title>
+    <title>Pikachu Writeups</title>
 <style>
 body {
     margin: 0;
@@ -61,36 +61,20 @@ h1{
     <div class="container">
         <a class="back-link" href="index.html">← 返回博客首页</a >
         <h1>Pikachu 靶场 Writeup 目录</h1>
-        <div class="item">
-            <a href="">1. SQL 数字型注入（待完成）</a >
-        </div>
-        <div class="item">
-            <a href="">2. SQL 搜索型注入（待完成）</a >
-        </div>
-        <div class="item">
-            <a href="">3. XSS 反射型</a >
-        </div>
-        <div class="item">
-            <a href="">4. XSS 存储型</a >
-        </div>
-        <div class="item">
-            <a href="">5. 文件上传漏洞</a >
-        </div>
-        <div class="item">
-            <a href="">6. 暴力破解</a >
-        </div>
-        <div class="item">
-            <a href="">7. RCE 远程命令执行</a >
-        </div>
-        <div class="item">
-            <a href="">8. CSRF</a >
-        </div>
-        <div class="item">
-            <a href="">9. 文件包含</a >
-        </div>
-        <div class="item">
-            <a href="">10. XXE</a >
-        </div>
+
+        {% assign pikachu_posts = site.tags.Pikachu | reverse %}
+        {% if pikachu_posts.size > 0 %}
+            {% for post in pikachu_posts %}
+            <div class="item">
+                <a href="{{ post.url }}">{{ post.title }}</a >
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="item">
+                <span style="color:#ccc;">暂无题解，快去刷题写Writeup吧✨</span>
+            </div>
+        {% endif %}
+
     </div>
 </div>
 </body>
