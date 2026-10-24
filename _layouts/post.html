@@ -1,34 +1,83 @@
 ---
+layout: null
 ---
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
-    <style>
-        body {
-            font-family: system-ui;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 24px;
-        }
-        h1 {
-            font-size: 38px;
-        }
-        p {
-            font-size: 18px;
-            line-height: 1.8;
-        }
-        hr {
-            margin:30px 0;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>{{ page.title }}</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: url("lazy.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.bg-mask {
+    background-color: rgba(0,0,0,0.55);
+    min-height: 100vh;
+    padding:40px 20px;
+    color:#fff;
+    font-family: system-ui, sans-serif;
+}
+.article-wrap{
+    max-width:720px;
+    margin:0 auto;
+}
+.article-wrap h1,h2,h3{
+    color:#fff;
+}
+.article-wrap p{
+    line-height:1.7;
+    font-size:17px;
+}
+.article-wrap hr{
+    border-color:rgba(255,255,255,0.25);
+}
+.article-wrap a{
+    color:#98fb98;
+}
+/* 表格美化，你之前想要的markdown表格渲染 */
+table{
+    border-collapse: collapse;
+    width:100%;
+    margin:16px 0;
+}
+table th,table td{
+    border:1px solid rgba(255,255,255,0.3);
+    padding:8px 12px;
+}
+/* 代码块暗色 */
+pre{
+    background:rgba(30,30,30,0.75);
+    padding:14px;
+    border-radius:8px;
+    overflow-x:auto;
+}
+code{
+    color:#98fb98;
+}
+.back-btn{
+    display:inline-block;
+    color:#87CEFA;
+    text-decoration:none;
+    margin-bottom:24px;
+}
+.back-btn:hover{
+    text-decoration:underline;
+}
+</style>
 </head>
 <body>
-    <h1>{{ page.title }}</h1>
-    <p>发布日期：{{ page.date | date: "%Y-%m-%d" }}</p >
-    <hr>
-    {{ content }}
+<div class="bg-mask">
+    <div class="article-wrap">
+        <a class="back-btn" href="javascript:history.back()">← 返回上一页</a >
+        <h1>{{ page.title }}</h1>
+        <p>发布日期：{{ page.date | date:"%Y-%m-%d" }}</p >
+        <hr>
+        {{ content }}
+    </div>
+</div>
 </body>
 </html>
