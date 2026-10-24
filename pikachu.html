@@ -5,7 +5,7 @@ layout: null
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>Pikachu Writeups</title>
+    <title>Pikachu靶场 Writeups</title>
 <style>
 body {
     margin: 0;
@@ -38,40 +38,58 @@ body {
     text-decoration: underline;
 }
 h1{
-    text-align:center;
+    font-size: 34px;
+    margin-bottom:6px;
 }
-.item{
-    padding:10px 14px;
-    border:1px solid rgba(255,255,255,0.2);
-    border-radius:8px;
-    margin:10px 0;
+.sub-info{
+    color:#cccccc;
+    margin-bottom:28px;
 }
-.item a{
-    color:#98fb98;
+.card-item{
+    background:rgba(40,40,40,0.65);
+    border-radius:14px;
+    padding:16px 20px;
+    margin:12px 0;
+}
+.card-item a{
+    color:#ffffff;
     text-decoration:none;
+    font-size:17px;
+    display:block;
 }
-.item a:hover{
-    color:#fff;
-    text-decoration:underline;
+.card-item a:hover{
+    color:#98fb98;
+}
+.date-text{
+    margin-top:6px;
+    color:#bbbbbb;
+    font-size:14px;
+}
+.empty-tip{
+    text-align:center;
+    padding:40px;
+    color:#ccc;
 }
 </style>
 </head>
 <body>
 <div class="bg-mask">
     <div class="container">
-        <a class="back-link" href="index.html">← 返回博客首页</a >
-        <h1>Pikachu 靶场 Writeup 目录</h1>
-
+        <a class="back-link" href="index.html">← 返回总入口</a >
+        <h1>Pikachu</h1>
         {% assign pikachu_posts = site.tags.Pikachu | reverse %}
+        <div class="sub-info">共 {{ pikachu_posts.size }} 篇解题记录</div>
+
         {% if pikachu_posts.size > 0 %}
             {% for post in pikachu_posts %}
-            <div class="item">
+            <div class="card-item">
                 <a href="{{ post.url }}">{{ post.title }}</a >
+                <div class="date-text">{{ post.date | date: "%Y-%m-%d" }}</div>
             </div>
             {% endfor %}
         {% else %}
-            <div class="item">
-                <span style="color:#ccc;">暂无题解，快去刷题写Writeup吧✨</span>
+            <div class="empty-tip">
+                暂无解题记录，快去刷题写Writeup吧✨
             </div>
         {% endif %}
 
