@@ -1,11 +1,11 @@
 ---
-title: Pikachu Cross-Site Scripting - DOM型XSS-x
+title: Pikachu Cross-Site Scripting - DOM型XSS
 date: 2026-10-25 18:00:00 +0800
 categories: Web安全 靶场Writeup
 tags: Pikachu XSS DOM型XSS
 ---
 
-## 题目:  Pikachu Cross-Site Scripting - DOM型XSS-x
+## 题目:  Pikachu Cross-Site Scripting - DOM型XSS
 
 ## 题目描述
 页面提供了一个输入框，要求利用 DOM 型 XSS 漏洞，让页面弹窗。
