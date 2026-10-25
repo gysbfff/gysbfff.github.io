@@ -23,7 +23,7 @@ POST 型反射 XSS 的原理与 GET 型相同，都是由于服务端未对用�
 
 **2. 抓包与注入**
 * 开启 Burp Suite 代理拦截。
-* 在该输入框中随便输入内容（如 `kebi`），点击 submit，拦截到 POST 请求。
+* 在该输入框中随便输入内容，点击 submit，拦截到 POST 请求。
 * 将请求体中的参数值替换为 Payload：`message=<script>alert(1)</script>&submit=submit`。
 * 放行请求（Forward）。
 
