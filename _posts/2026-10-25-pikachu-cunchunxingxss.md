@@ -20,7 +20,7 @@ tags: Pikachu XSS 存储型XSS 持久型XSS
 
 **2. 直接注入 Payload**
 * 无需借助 Burp Suite 抓包修改，直接清空文本框，输入以下 Payload 并提交：
-  `<script>alert(1)</script>&submit=submit`
+  `<script>alert(1)</script>`
 * 页面立刻弹出了警告框（`1`）。
 * **现象分析**：注意到，留言列表里把 `&submit=submit` 也原样显示了出来。这是因为该后端逻辑十分粗糙，它不仅没有过滤 `<script>` 标签，也没有对 HTML 特殊字符（如 `&`）进行转义，把用户输入的整个字符串都当成文本存入了数据库。
 
