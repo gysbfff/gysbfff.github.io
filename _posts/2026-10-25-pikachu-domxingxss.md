@@ -1,11 +1,11 @@
 ---
 title: Pikachu Cross-Site Scripting - DOM型XSS
-date: 2026-10-25 18:00:00 +0800
-categories: Web安全 靶场Writeup
-tags: Pikachu XSS DOM型XSS
+date: 2026-10-25 
+categories: [Web安全, 靶场Writeup]
+tags: [Pikachu, XSS, DOM型XSS]
 ---
 
-## 题目:  Pikachu Cross-Site Scripting - DOM型XSS
+## 题目: Pikachu Cross-Site Scripting - DOM型XSS
 
 ## 题目描述
 页面提供了一个输入框，要求利用 DOM 型 XSS 漏洞，让页面弹窗。
@@ -31,7 +31,7 @@ DOM 型 XSS 与反射型、存储型最大的区别在于：**它完全发生在
 
 ## 知识点总结
 1. **DOM 型 XSS 的独特性**：它的漏洞逻辑完全在前端 JS 中，不涉及后端代码，因此传统的 WAF（Web 应用防火墙）和基于后端过滤的防御机制对它无效。
-2. **`<script>` 标签的失效场景**：在 `innerHTML` 等操作中，动态插入的 `<script>` 标签通常不会执行。此时需要根据输出上下文，改用其他 Payload（如 `javascript:` 伪协议、`<img src=x onerror=alert(1)>` 等）。
+2. **`<script>` 标签的失效场景**：在 `innerHTML` 等操作中，动态插入的 `<script>` 标签通常不会执行。此时需要根据输出上下文，改用其他 Payload（如 `javascript:` 伪协议、`'><img src=x onerror=alert(1)>` 等）。
 3. **防御策略**：
    * 避免使用 `innerHTML`、`outerHTML`、`document.write` 等直接插入 HTML 的 API，改用 `textContent` 或 `innerText`。
    * 如果必须使用 `innerHTML`，必须对用户输入进行严格的过滤或转义处理。
