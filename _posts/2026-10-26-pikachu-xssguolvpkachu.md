@@ -1,6 +1,7 @@
 ---
-title: "Pikachu Cross-Site Scripting - XSS之过滤
-date: 2026-10-25
+layout: post
+title: Pikachu Cross-Site Scripting - XSS之过滤
+date: 2026-10-26 
 categories: [Web安全, 靶场Writeup]
 tags: [Pikachu, XSS, 过滤绕过]
 ---
