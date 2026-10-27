@@ -2,7 +2,7 @@
 title: Pikachu Cross-Site Scripting - XSS之htmlspecialchars
 date: 2026-10-26
 categories: Web安全 靶场Writeup
-tags: Pikachu XSS htmlspecialchars绕过 属性注入]
+tags: Pikachu XSS htmlspecialchars绕过 属性注入
 ---
 
 ## 题目: Pikachu Cross-Site Scripting - XSS之htmlspecialchars
