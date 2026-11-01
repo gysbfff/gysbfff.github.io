@@ -1,6 +1,6 @@
 ---
-title: "Pikachu Cross-Site Scripting - DOM型XSS-x"
-date: "2026-10-25
+title: Pikachu Cross-Site Scripting - DOM型XSS-x
+date: 2026-10-25
 categories: [Web安全, 靶场Writeup]
 tags: [Pikachu, XSS, DOM型XSS]
 ---
