@@ -1,5 +1,5 @@
 ---
-title: "Pikachu Cross-Site Scripting - XSS之href输出
+title: Pikachu Cross-Site Scripting - XSS之href输出
 date: 2026-10-26
 categories: Web安全 靶场Writeup
 tags: Pikachu XSS href输出 伪协议
