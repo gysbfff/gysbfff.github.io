@@ -1,0 +1,99 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>SQLi-Labs Writeups</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: url("lazy.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.bg-mask {
+    background-color: rgba(0, 0, 0, 0.55);
+    min-height: 100vh;
+    padding: 30px 16px;
+    color: #fff;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.back-link {
+    display: inline-block;
+    color: #87CEFA;
+    text-decoration: none;
+    margin-bottom: 24px;
+}
+.back-link:hover{
+    text-decoration: underline;
+}
+h1{
+    font-size: 34px;
+    margin-bottom:6px;
+}
+.sub-info{
+    color:#cccccc;
+    margin-bottom:28px;
+}
+.card-item{
+    background:rgba(40,40,40,0.65);
+    border-radius:14px;
+    padding:16px 20px;
+    margin:12px 0;
+}
+.card-item a{
+    color:#ffffff;
+    text-decoration:none;
+    font-size:17px;
+    display:block;
+}
+.card-item a:hover{
+    color:#98fb98;
+}
+.date-text{
+    margin-top:6px;
+    color:#bbbbbb;
+    font-size:14px;
+}
+.empty-tip{
+    text-align:center;
+    padding:40px;
+    color:#ccc;
+}
+</style>
+</head>
+<body>
+<div class="bg-mask">
+    <div class="container">
+        <a class="back-link" href="index.html">← 返回总入口</a >
+        <h1>SQLi-Labs</h1>
+        {% assign sqli_posts = site.tags.SQLi | reverse %}
+        <div class="sub-info">共 {{ sqli_posts.size }} 篇解题记录</div>
+
+        {% if sqli_posts.size > 0 %}
+            {% for post in sqli_posts %}
+            <div class="card-item">
+                <a href="{{ post.url }}">{{ post.title }}</a >
+                <div class="date-text">{{ post.date | date: "%Y-%m-%d" }}</div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="empty-tip">
+                暂无解题记录，快去刷题写Writeup吧✨
+            </div>
+        {% endif %}
+
+    </div>
+</div>
+</body>
+</html>
