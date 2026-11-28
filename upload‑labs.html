@@ -77,7 +77,7 @@ h1{
     <div class="container">
         <a class="back-link" href="index.html">← 返回总入口</a>
         <h1>Upload‑Labs</h1>
-        {% assign upload_posts = site.tags.Upload‑Labs | reverse %}
+        {% assign upload_posts = site.tags.upload | reverse %}
         <div class="sub-info">共 {{ upload_posts.size }} 篇解题记录</div>
 
         {% if upload_posts.size > 0 %}
